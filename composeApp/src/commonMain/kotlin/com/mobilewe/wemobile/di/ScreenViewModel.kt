@@ -1,0 +1,46 @@
+package com.mobilewe.wemobile.di
+
+import com.mobilewe.wemobile.presentation.app.AppViewModel
+import com.mobilewe.wemobile.presentation.screen.account.account.AccountViewModel
+import com.mobilewe.wemobile.presentation.screen.account.help.HelpViewModel
+import com.mobilewe.wemobile.presentation.screen.account.notificationSettings.NotificationSettingsViewModel
+import com.mobilewe.wemobile.presentation.screen.account.security.SecurityViewModel
+import com.mobilewe.wemobile.presentation.screen.auth.login.LoginScreenModel
+import com.mobilewe.wemobile.presentation.screen.auth.phoneRegistration.PhoneRegViewModel
+import com.mobilewe.wemobile.presentation.screen.auth.pickLanguage.PickLanguageScreenModel
+import com.mobilewe.wemobile.presentation.screen.auth.register.registration.RegistrationScreenModel
+import com.mobilewe.wemobile.presentation.screen.auth.register.registrationSubmit.RegistrationSubmitScreenModel
+import com.mobilewe.wemobile.presentation.screen.bankTransfer.BankTransferViewModel
+import com.mobilewe.wemobile.presentation.screen.buyAirtime.buyAirtime.BuyAirtimeViewModel
+import com.mobilewe.wemobile.presentation.screen.main.MainViewModel
+import com.mobilewe.wemobile.presentation.screen.onboarding.OnBoardViewModel
+import com.mobilewe.wemobile.presentation.screen.payWithSacco.buyGoods.BuyGoodsViewModel
+import com.mobilewe.wemobile.presentation.screen.payWithSacco.paybill.PayBillScreenViewModel
+import com.mobilewe.wemobile.presentation.screen.payWithSacco.wesacco.WePayBillScreenViewModel
+import com.mobilewe.wemobile.presentation.screen.requestMoney.requestMoney.RequestMoneyViewModel
+import com.mobilewe.wemobile.presentation.screen.sendMoney.sendMoney.SendMoneyViewModel
+import org.koin.core.module.dsl.factoryOf
+import org.koin.core.module.dsl.viewModelOf
+import org.koin.dsl.module
+
+val screenViewModel = module {
+    factoryOf(::AppViewModel)
+    factoryOf(::PickLanguageScreenModel)
+    factoryOf(::PhoneRegViewModel)
+    factoryOf(::LoginScreenModel)
+    factoryOf(::RegistrationScreenModel)
+    factoryOf(::RegistrationSubmitScreenModel)
+    viewModelOf(::OnBoardViewModel)
+    viewModelOf(::SecurityViewModel)
+    viewModelOf(::NotificationSettingsViewModel)
+    viewModelOf(::AccountViewModel)
+    viewModelOf(::HelpViewModel)
+    viewModelOf(::BuyAirtimeViewModel)
+    viewModelOf(::BankTransferViewModel)
+    viewModelOf(::PayBillScreenViewModel)
+    viewModelOf(::BuyGoodsViewModel)
+    viewModelOf(::WePayBillScreenViewModel)
+    viewModelOf(::SendMoneyViewModel)
+    viewModelOf(::RequestMoneyViewModel)
+    viewModelOf(::MainViewModel)
+}

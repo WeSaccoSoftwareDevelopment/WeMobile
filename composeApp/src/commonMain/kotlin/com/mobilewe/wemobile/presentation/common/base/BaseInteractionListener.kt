@@ -1,0 +1,3 @@
+package com.mobilewe.wemobile.presentation.common.base
+
+interface BaseInteractionListener
