@@ -1,4 +1,4 @@
-package org.saccowemobile.wemobile.presentation.markets
+package com.mobilewe.wemobile.presentation.screen.markets
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

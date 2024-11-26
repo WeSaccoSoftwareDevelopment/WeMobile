@@ -25,7 +25,7 @@ private val localStringResources = staticCompositionLocalOf<IStringResources> {
 @Composable
 fun WeSaccoMobileTheme(
     useDarkTheme: Boolean = isSystemInDarkTheme(),
-    languageCode: LanguageCode = LanguageCode.SW,
+    languageCode: LanguageCode,
     content: @Composable () -> Unit,
 ) {
     val drawableResources = if (useDarkTheme) BpDrawableDarkResources else DrawableResources()

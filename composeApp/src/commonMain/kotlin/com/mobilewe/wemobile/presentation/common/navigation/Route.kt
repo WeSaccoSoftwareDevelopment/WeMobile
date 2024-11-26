@@ -55,7 +55,3 @@ sealed interface Route {
     data class BookDetail(val id: String): Route
 }
 
-const val HOME = "home"
-const val TRANSACT = "transact"
-const val DISCOVER = "discover"
-const val ACCOUNTS = "account"

@@ -34,6 +34,7 @@ import com.mobilewe.wemobile.presentation.common.composables.CategoryTabs
 import com.mobilewe.wemobile.presentation.common.composables.appbar.AppToolbar
 import com.mobilewe.wemobile.presentation.common.theme.WeThemes
 import com.mobilewe.wemobile.presentation.screen.transactions.composable.TransactCardItem
+import org.koin.compose.viewmodel.koinViewModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -41,7 +42,7 @@ import com.mobilewe.wemobile.presentation.screen.transactions.composable.Transac
 fun NewTransactionScreen(
     navController: NavController = rememberNavController()
 ) {
-    val transactViewModel: TransactViewModel = viewModel()
+    val transactViewModel: TransactViewModel = koinViewModel()
     val newTransactUiState by transactViewModel.newTransactUiState.collectAsStateWithLifecycle()
     val isRemittanceCategory = newTransactUiState.selectedCategory == "Remittance"
 

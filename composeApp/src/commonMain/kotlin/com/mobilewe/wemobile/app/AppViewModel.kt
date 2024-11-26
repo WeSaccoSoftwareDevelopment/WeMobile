@@ -1,4 +1,4 @@
-package com.mobilewe.wemobile.presentation.app
+package com.mobilewe.wemobile.app
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -29,8 +29,6 @@ class AppViewModel(
         getUserLanguageCode()
         getInitScreen()
     }
-
-
 
 
     private fun getUserLanguageCode() {

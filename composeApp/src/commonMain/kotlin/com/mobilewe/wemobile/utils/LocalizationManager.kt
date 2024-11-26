@@ -18,7 +18,7 @@ object LocalizationManager {
         return when (languageCode) {
             LanguageCode.EN -> LayoutDirection.Ltr
             LanguageCode.SW -> LayoutDirection.Ltr
-            else -> LayoutDirection.Rtl
+            else -> LayoutDirection.Ltr
         }
     }
 }

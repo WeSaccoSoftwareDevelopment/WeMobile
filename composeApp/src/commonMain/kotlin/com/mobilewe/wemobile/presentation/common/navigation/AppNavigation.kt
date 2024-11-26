@@ -55,7 +55,7 @@ fun AppNavigation(navController: NavHostController) {
             composable<Route.Login>{
                 LoginScreen(
                     onBiometricSetUp = {
-                        navController.navigate(Route.Verification)
+                        navController.navigate(Route.Home)
                     },
                 )
             }

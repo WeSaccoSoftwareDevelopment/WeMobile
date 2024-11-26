@@ -32,6 +32,7 @@ import com.mobilewe.wemobile.presentation.screen.home.model.getHomeItems
 import com.mobilewe.wemobile.presentation.screen.home.model.getPayBillMerchants
 import com.mobilewe.wemobile.presentation.screen.home.model.getPaySomeone
 import com.mobilewe.wemobile.resources.Resources
+import org.koin.compose.viewmodel.koinViewModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -39,7 +40,7 @@ import com.mobilewe.wemobile.resources.Resources
 fun HomeScreen(
     navController: NavController,
 ) {
-    val homeViewModel: HomeViewModel = viewModel()
+    val homeViewModel: HomeViewModel = koinViewModel()
     val homeUiState by homeViewModel.homeUiState.collectAsStateWithLifecycle()
     val sheetState = rememberModalBottomSheetState()
     var modalState by rememberSaveable { mutableStateOf(ModalSheetState.None) }

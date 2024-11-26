@@ -38,7 +38,13 @@ kotlin {
 
 
     sourceSets {
-
+        all {
+            languageSettings {
+                optIn("org.jetbrains.compose.resources.ExperimentalResourceApi")
+                optIn("androidx.compose.material.ExperimentalMaterialApi")
+                optIn("androidx.compose.material3.ExperimentalMaterial3Api")
+            }
+        }
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)

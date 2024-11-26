@@ -1,6 +1,6 @@
 package com.mobilewe.wemobile.di
 
-import com.mobilewe.wemobile.presentation.app.AppViewModel
+import com.mobilewe.wemobile.app.AppViewModel
 import com.mobilewe.wemobile.presentation.screen.account.account.AccountViewModel
 import com.mobilewe.wemobile.presentation.screen.account.help.HelpViewModel
 import com.mobilewe.wemobile.presentation.screen.account.notificationSettings.NotificationSettingsViewModel
@@ -12,6 +12,7 @@ import com.mobilewe.wemobile.presentation.screen.auth.register.registration.Regi
 import com.mobilewe.wemobile.presentation.screen.auth.register.registrationSubmit.RegistrationSubmitScreenModel
 import com.mobilewe.wemobile.presentation.screen.bankTransfer.BankTransferViewModel
 import com.mobilewe.wemobile.presentation.screen.buyAirtime.buyAirtime.BuyAirtimeViewModel
+import com.mobilewe.wemobile.presentation.screen.home.HomeViewModel
 import com.mobilewe.wemobile.presentation.screen.main.MainViewModel
 import com.mobilewe.wemobile.presentation.screen.onboarding.OnBoardViewModel
 import com.mobilewe.wemobile.presentation.screen.payWithSacco.buyGoods.BuyGoodsViewModel
@@ -19,6 +20,7 @@ import com.mobilewe.wemobile.presentation.screen.payWithSacco.paybill.PayBillScr
 import com.mobilewe.wemobile.presentation.screen.payWithSacco.wesacco.WePayBillScreenViewModel
 import com.mobilewe.wemobile.presentation.screen.requestMoney.requestMoney.RequestMoneyViewModel
 import com.mobilewe.wemobile.presentation.screen.sendMoney.sendMoney.SendMoneyViewModel
+import com.mobilewe.wemobile.presentation.screen.transactions.TransactViewModel
 import org.koin.core.module.dsl.factoryOf
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
@@ -28,12 +30,14 @@ val screenViewModel = module {
     factoryOf(::PickLanguageScreenModel)
     factoryOf(::PhoneRegViewModel)
     factoryOf(::LoginScreenModel)
+    factoryOf(::HomeViewModel)
+    factoryOf(::TransactViewModel)
+    factoryOf(::AccountViewModel)
     factoryOf(::RegistrationScreenModel)
     factoryOf(::RegistrationSubmitScreenModel)
     viewModelOf(::OnBoardViewModel)
     viewModelOf(::SecurityViewModel)
     viewModelOf(::NotificationSettingsViewModel)
-    viewModelOf(::AccountViewModel)
     viewModelOf(::HelpViewModel)
     viewModelOf(::BuyAirtimeViewModel)
     viewModelOf(::BankTransferViewModel)
