@@ -41,87 +41,61 @@ data class SendMoneyItem(
 
 
 
-fun getTravelAndShop(): List<SendMoneyItem>{
-    return listOf(
-        SendMoneyItem(
-            text = "R.string.bus_travel_hint",
-            icon = Res.drawable.paid_icon,
-            category = "Travel & Shop"
-
-        ),
-        SendMoneyItem(
-            text = "R.string.flight_hint",
-            icon = Res.drawable.paid_icon,
-            category = "Travel & Shop"
-
-        ),
-        SendMoneyItem(
-            text = "R.string.train_hint",
-            icon = Res.drawable.paid_icon,
-            category = "Travel & Shop"
-        ),
-        SendMoneyItem(
-            text = "R.string.train_hint",
-            icon = Res.drawable.paid_icon,
-            category = "Travel & Shop"
-        )
-    )
-}
 
 
 fun getSendMoneyList(): List<SendMoneyItem>{
     return listOf(
         SendMoneyItem(
-            text = "R.string.send_money",
+            text = "Send Money",
             icon = Res.drawable.send,
             category = "Transact"
         ),
         SendMoneyItem(
-            text = "Res.string.bank_transfer",
+            text = "Bank Transfer",
             icon = Res.drawable.bankss,
             category = "Transact"
 
         ),
         SendMoneyItem(
-            text = "R.string.withdraw",
+            text = "Withdraw",
             icon = Res.drawable.withdraw,
             category = "Transact"
 
         ),
         SendMoneyItem(
-            text = "R.string.loan",
+            text = "Loan",
             icon = Res.drawable.loan_icon,
             category = "Transact"
 
         ),
         SendMoneyItem(
-            text = "R.string.buy_airtime",
+            text = "Buy Airtime",
             icon = Res.drawable.ic_system_upate_24,
             category = "Transact"
 
         ),
         SendMoneyItem(
-            text = "R.string.bill_pay_and_till_pay_hint",
+            text = "Pay Bill & Buy Goods",
             icon = Res.drawable.ic_utility,
             category = "Transact"
 
-        ),
+        )
     )
 }
 fun getInvestmentInsurance(): List<SendMoneyItem>{
     return listOf(
         SendMoneyItem(
-            text = "R.string.savings",
+            text = "Savings",
             icon = Res.drawable.savings_icons,
             category = "Invest & Insurance"
         ),
         SendMoneyItem(
-            text = "R.string.deposit",
+            text = "Deposit",
             icon = Res.drawable.icon_deposit,
             category = "Invest & Insurance"
         )
     )
 }
 
-val allList = getSendMoneyList() + getTravelAndShop() + getInvestmentInsurance().sortedBy { it.category }
+val allList = getSendMoneyList()  + getInvestmentInsurance().sortedBy { it.category }
 

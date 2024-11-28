@@ -13,6 +13,7 @@ import com.mobilewe.wemobile.utils.LocalizationManager
 import com.mobilewe.wemobile.presentation.common.theme.WsTheme
 import com.mobilewe.wemobile.utils.generateImageLoader
 import com.mobilewe.wemobile.utils.getPlatformContext
+import com.mobilewe.wemobile.utils.setInsetsController
 import com.seiko.imageloader.LocalImageLoader
 
 
@@ -25,12 +26,11 @@ private val localStringResources = staticCompositionLocalOf<IStringResources> {
 @Composable
 fun WeSaccoMobileTheme(
     useDarkTheme: Boolean = isSystemInDarkTheme(),
-    languageCode: LanguageCode,
+    languageCode: LanguageCode = LanguageCode.EN,
     content: @Composable () -> Unit,
 ) {
     val drawableResources = if (useDarkTheme) BpDrawableDarkResources else DrawableResources()
     val context = getPlatformContext()
-
 
     CompositionLocalProvider(
         localDrawableResources provides drawableResources,
@@ -39,6 +39,7 @@ fun WeSaccoMobileTheme(
         LocalImageLoader provides remember { generateImageLoader(context) }
     ) {
         WsTheme(useDarkTheme = useDarkTheme) {
+            setInsetsController(useDarkTheme)
             content()
         }
     }

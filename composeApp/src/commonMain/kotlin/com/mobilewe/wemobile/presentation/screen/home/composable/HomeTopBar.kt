@@ -23,7 +23,7 @@ import wemobile.composeapp.generated.resources.sacco_logo
 
 
 @Composable
-fun HomeTopBar(greetings: String = Resources.strings.greetings) {
+fun HomeTopBar(greetings: String = "") {
     Row(
         modifier = Modifier
             .fillMaxWidth()

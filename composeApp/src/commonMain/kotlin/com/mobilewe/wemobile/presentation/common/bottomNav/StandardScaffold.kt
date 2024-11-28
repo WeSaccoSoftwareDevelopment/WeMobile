@@ -25,25 +25,27 @@ import org.jetbrains.compose.resources.painterResource
 import wemobile.composeapp.generated.resources.Res
 import wemobile.composeapp.generated.resources.sacco_ride
 import androidx.compose.runtime.derivedStateOf
-
-
+import androidx.navigation.NavDestination
+import androidx.navigation.NavDestination.Companion.hasRoute
+import androidx.navigation.NavDestination.Companion.hierarchy
+import com.mobilewe.wemobile.presentation.common.theme.WeThemes
+import com.mobilewe.wemobile.utils.getStatusBarPadding
 
 
 @Composable
 fun StandardScaffold(
     navController: NavController,
     modifier: Modifier = Modifier,
-    showBottomBar: Boolean = true,
     isLoggedIn: Boolean,
     onFabClick: () -> Unit = {},
     content: @Composable () -> Unit
 ) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
-    val currentRoute = navBackStackEntry?.destination?.route
-        ?: BottomNavigation.HOME.screen::class.qualifiedName.orEmpty()
+    val currentDestination: NavDestination? = navBackStackEntry?.destination
 
-    val currentRouteTrimmed by remember(currentRoute) {
-        derivedStateOf { currentRoute.substringBefore("?") }
+
+    val showBottomBar = BottomNavigation.entries.map { it.route::class }.any { route ->
+        currentDestination?.hierarchy?.any { it.hasRoute(route) } == true
     }
 
     Scaffold(
@@ -53,19 +55,18 @@ fun StandardScaffold(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                 ) {
                     BottomNavigation.entries.forEachIndexed { i, bottomNavItem ->
-                        val isSelected by remember(currentRoute) {
-                            derivedStateOf { currentRouteTrimmed == bottomNavItem.screen::class.qualifiedName }
-                        }
+                        val isSelected =
+                            currentDestination?.hierarchy?.any { it.hasRoute(bottomNavItem.route::class) } == true
                         StandardBottomNavItem(
                             icon = bottomNavItem.icon,
                             title = bottomNavItem.title,
                             contentDescription = bottomNavItem.contentDescription,
                             selected = isSelected,
-                            enabled = true
+                            enabled = bottomNavItem.icon != null
                         ) {
-                            if (!isSelected) { // Navigate only if not already selected
-                                navController.navigate(bottomNavItem.screen) {
-                                    launchSingleTop = true
+                            if (currentDestination !=null) {
+                                navController.navigate(bottomNavItem.route) {
+                                    launchSingleTop = false
                                     popUpTo(navController.graph.startDestinationId) { inclusive = false }
                                 }
                             }

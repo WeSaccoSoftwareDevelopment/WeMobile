@@ -30,37 +30,28 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.mobilewe.wemobile.domain.model.PayBill
 import com.mobilewe.wemobile.domain.model.payBillItems
-import com.mobilewe.wemobile.presentation.common.composables.MainBackgroundHeader
-import com.mobilewe.wemobile.presentation.common.composables.appbar.AppToolbar
 import com.mobilewe.wemobile.presentation.common.composables.button.ContinueButton
 import com.mobilewe.wemobile.presentation.common.composables.modalSheet.WeSaccoModalSheet
 import com.mobilewe.wemobile.presentation.common.composables.textfield.AccountTypeTextField
 import com.mobilewe.wemobile.presentation.common.composables.textfield.RideOutlinedTextField
-import com.mobilewe.wemobile.resources.Resources
-import org.koin.compose.viewmodel.koinViewModel
 import com.mobilewe.wemobile.presentation.screen.payWithSacco.paybill.component.BillDialog
 import com.mobilewe.wemobile.presentation.screen.payWithSacco.paybill.component.BusinessNumberTextField
 import com.mobilewe.wemobile.presentation.screen.payWithSacco.paybill.component.PayBillComponent
+import com.mobilewe.wemobile.resources.Resources
+import org.jetbrains.compose.resources.stringResource
+import org.koin.compose.viewmodel.koinViewModel
+import wemobile.composeapp.generated.resources.Res
+import wemobile.composeapp.generated.resources.*
+import wemobile.composeapp.generated.resources.accountNumber
+import wemobile.composeapp.generated.resources.amount
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WesaccoPayBillScreen(
-    modifier: Modifier = Modifier,
     navController: NavController
 ) {
-    MainBackgroundHeader(
-        topBar = {
-            AppToolbar(
-                title = "WeSaccoPayBill",
-                showBackArrow = true,
-                navigateBack = { navController.popBackStack() }
-            )
-        },
-    ) {
-        WesaccoPayBillScreenContent(
-            navController = navController
-        )
-    }
+    WesaccoPayBillScreenContent(
+        navController = navController
+    )
 
 }
 
@@ -139,7 +130,8 @@ fun WePayBillContentScreen(
 
     Column(
         modifier = Modifier
-            .background(MaterialTheme.colorScheme.background),
+            .background(MaterialTheme.colorScheme.background)
+            .padding(horizontal = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         LazyColumn(
@@ -171,7 +163,7 @@ fun WePayBillContentScreen(
                     value = screenUiState.accountNumber,
                     onValueChange = onAccountNumberChanged,
                     keyboardType = KeyboardType.Text,
-                    hint = "stringResource(id = R.string.accountNumber)",
+                    hint = stringResource(Res.string.accountNumber),
                     accountNumberLength = "${screenUiState.accountNumber.length}/${20}",
                     maxLength = 20,
                     error = if (screenUiState.isAccountNoError) Resources.strings.invalidEmail else "",
@@ -180,16 +172,16 @@ fun WePayBillContentScreen(
             }
             item {
                 RideOutlinedTextField(
-                    value = screenUiState.amount.toString(),
+                    value = screenUiState.amount,
                     onValueChange = onAmountChanged,
                     keyboardType = KeyboardType.Number,
-                    hint = "stringResource(id = R.string.amount)"
+                    hint = stringResource(Res.string.amount)
                 )
             }
 
             item {
                 ContinueButton(
-                    text = "stringResource(id = R.string.continuee)",
+                    text = stringResource(Res.string.continuee),
                     onClick = onClickButton,
                     enable = screenUiState.isPayBillEnabled
                 )

@@ -23,6 +23,10 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.mobilewe.wemobile.presentation.common.theme.WeThemes
+import org.jetbrains.compose.resources.stringResource
+import wemobile.composeapp.generated.resources.Res
+import wemobile.composeapp.generated.resources.*
+import wemobile.composeapp.generated.resources.call_savings_title
 
 
 @Composable
@@ -81,43 +85,43 @@ fun SavingsScreen(
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Text(
-                            text = "stringResource(id = R.string.savings_title)",
+                            text = stringResource(Res.string.savings_title),
                             style = WeThemes.typography.titleLarge
                         )
                         Text(
-                            text = "stringResource(id = R.string.savings_description)",
+                            text = stringResource(Res.string.savings_description),
                             fontSize = 12.sp,
                         )
                     }
                 }
                 item {
                     SavingsComponent(
-                        savingTypeTitle = "R.string.classic_savings_title",
-                        savingTypeSubtitle = "R.string.classic_savings_subtitle",
+                        savingTypeTitle = stringResource(Res.string.classic_savings_title),
+                        savingTypeSubtitle = stringResource(Res.string.classic_savings_subtitle),
                         onClickLearnMore = {  },
                         onClickOpenAccount = { }
                     )
                 }
                 item {
                     SavingsComponent(
-                        savingTypeTitle = "R.string.goal_savings_title",
-                        savingTypeSubtitle = "R.string.goal_savings_subtitle",
+                        savingTypeTitle = stringResource(Res.string.goal_savings_title),
+                        savingTypeSubtitle = stringResource(Res.string.goal_savings_subtitle),
                         onClickLearnMore = {  },
                         onClickOpenAccount = { }
                     )
                 }
                 item {
                     SavingsComponent(
-                        savingTypeTitle = "R.string.fixed_savings_title",
-                        savingTypeSubtitle = "R.string.fixed_savings_subtitle",
+                        savingTypeTitle = stringResource(Res.string.fixed_savings_title),
+                        savingTypeSubtitle = stringResource(Res.string.fixed_savings_subtitle),
                         onClickLearnMore = {  },
                         onClickOpenAccount = { }
                     )
                 }
                 item {
                     SavingsComponent(
-                        savingTypeTitle = "R.string.call_savings_title",
-                        savingTypeSubtitle = "R.string.call_savings_subtitle",
+                        savingTypeTitle = stringResource(Res.string.call_savings_title),
+                        savingTypeSubtitle = stringResource(Res.string.call_savings_subtitle),
                         onClickLearnMore = {  },
                         onClickOpenAccount = { }
                     )

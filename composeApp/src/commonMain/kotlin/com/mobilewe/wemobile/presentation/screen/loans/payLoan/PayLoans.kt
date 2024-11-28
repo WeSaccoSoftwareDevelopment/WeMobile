@@ -34,7 +34,10 @@ import com.mobilewe.wemobile.presentation.common.composables.LoanTypeDropDown
 import com.mobilewe.wemobile.presentation.common.composables.button.ContinueButton
 import com.mobilewe.wemobile.presentation.common.composables.textfield.RideOutlinedTextField
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import wemobile.composeapp.generated.resources.Res
+import wemobile.composeapp.generated.resources.amount
+import wemobile.composeapp.generated.resources.amount_support_text
 import wemobile.composeapp.generated.resources.loan_icon
 
 
@@ -62,8 +65,7 @@ fun PayLoans(
             .fillMaxWidth()
             .clickable(MutableInteractionSource(), null) {
                 onExpandToggle()
-            }
-            .padding(horizontal = 16.dp),
+            },
         elevation = CardDefaults.cardElevation(
             defaultElevation = 0.dp,
             pressedElevation = 0.dp,
@@ -142,8 +144,8 @@ fun PayLoans(
                             value = amount,
                             onValueChange = onAmountChanged,
                             keyboardType = KeyboardType.Phone,
-                            hint = "stringResource(id = R.string.amount)",
-                            supportText = "stringResource(id = R.string.amount_support_text)"
+                            hint = stringResource(Res.string.amount),
+                            supportText = stringResource(Res.string.amount_support_text)
                         )
 
                         ContinueButton(

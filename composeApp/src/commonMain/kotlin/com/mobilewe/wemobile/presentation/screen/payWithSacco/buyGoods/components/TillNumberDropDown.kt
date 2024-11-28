@@ -39,6 +39,9 @@ import com.mobilewe.wemobile.domain.model.getTillNumber
 import com.mobilewe.wemobile.presentation.common.composables.textfield.RideOutlinedTextField
 import com.mobilewe.wemobile.presentation.screen.payWithSacco.buyGoods.BuyGoodsUIState
 import com.mobilewe.wemobile.utils.getInitials
+import org.jetbrains.compose.resources.stringResource
+import wemobile.composeapp.generated.resources.Res
+import wemobile.composeapp.generated.resources.tillNumber
 
 @Composable
 fun TillNumberDropDown(
@@ -56,7 +59,7 @@ fun TillNumberDropDown(
         RideOutlinedTextField(
             value = state.tillNumber,
             onValueChange = { onTillNumberChanged(it) },
-            hint = "stringResource(id = R.string.tillNumber)",
+            hint = stringResource(Res.string.tillNumber),
             keyboardType = KeyboardType.Phone,
             trailingIcon = {
                 Icon(

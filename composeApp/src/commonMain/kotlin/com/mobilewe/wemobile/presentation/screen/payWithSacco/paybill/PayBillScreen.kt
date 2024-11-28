@@ -146,7 +146,7 @@ fun PayBillContentScreen(
                     value = screenUiState.accountNumber,
                     onValueChange = onAccountNumberChanged,
                     keyboardType = KeyboardType.Text,
-                    hint = "stringResource(id = R.string.accountNumber)",
+                    hint = Resources.strings.accountNumber,
                     accountNumberLength = "${screenUiState.accountNumber.length}/${20}",
                     maxLength = 20,
                     error = if (screenUiState.isAccountNoError) Resources.strings.invalidEmail else "",
@@ -158,13 +158,13 @@ fun PayBillContentScreen(
                     value = screenUiState.amount.toString(),
                     onValueChange = onAmountChanged,
                     keyboardType = KeyboardType.Number,
-                    hint = "stringResource(id = R.string.amount)"
+                    hint = Resources.strings.amount
                 )
             }
 
             item {
                 ContinueButton(
-                    text = "stringResource(id = R.string.continuee)",
+                    text = Resources.strings.continuee,
                     onClick = onClickButton,
                     enable = screenUiState.isPayBillEnabled
                 )

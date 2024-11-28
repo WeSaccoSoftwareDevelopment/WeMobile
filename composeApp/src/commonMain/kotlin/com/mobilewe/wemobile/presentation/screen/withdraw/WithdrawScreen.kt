@@ -17,6 +17,8 @@ import com.mobilewe.wemobile.presentation.common.composables.button.ContinueButt
 import com.mobilewe.wemobile.presentation.common.composables.modalSheet.WeSaccoModalSheet
 import com.mobilewe.wemobile.presentation.common.composables.textfield.AccountTypeTextField
 import com.mobilewe.wemobile.presentation.common.composables.textfield.RideOutlinedTextField
+import com.mobilewe.wemobile.resources.Resources
+import org.koin.compose.viewmodel.koinViewModel
 
 
 @Composable
@@ -34,7 +36,7 @@ fun WithdrawScreen(
 fun WithdrawContent(
     navigateBack:()->Unit
 ) {
-    val viewModel: WithdrawScreenViewModel = viewModel()
+    val viewModel: WithdrawScreenViewModel = koinViewModel()
     val uiState by viewModel.state.collectAsState()
     var isSheetOpen by rememberSaveable { mutableStateOf(false) }
     var currentBottomSheet: WithdrawModalSheetType? by remember { mutableStateOf(null) }
@@ -67,7 +69,7 @@ fun WithdrawContent(
         RideOutlinedTextField(
             value = uiState.amount,
             onValueChange = viewModel::onAmountChanged,
-            hint = "stringResource(id = R.string.amount)",
+            hint = Resources.strings.amount,
             keyboardType = KeyboardType.Number,
         )
 

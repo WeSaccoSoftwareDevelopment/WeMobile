@@ -2,6 +2,8 @@ package com.mobilewe.wemobile.presentation.screen.home.model
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
+import com.mobilewe.wemobile.presentation.common.navigation.RootGraph
+import com.mobilewe.wemobile.presentation.common.navigation.TransactDes
 import com.mobilewe.wemobile.resources.Resources
 import wemobile.composeapp.generated.resources.Res
 import wemobile.composeapp.generated.resources.ic_home
@@ -42,13 +44,14 @@ fun getPayBillMerchants(navController: NavController): List<PaymentOption> {
         PaymentOption(
             name = "Wesacco",
             category = "Send Money",
-            onNavigate = { }
+            onNavigate = {
+                navController.navigate(TransactDes.SendMoney)
+            }
         ),
         PaymentOption(
             name = "Buy Goods",
             category = "Bank",
             onNavigate = {
-//                navController.navigate(Graph.BUY_GOODS_ROUTE)
             }
         ),
         PaymentOption(

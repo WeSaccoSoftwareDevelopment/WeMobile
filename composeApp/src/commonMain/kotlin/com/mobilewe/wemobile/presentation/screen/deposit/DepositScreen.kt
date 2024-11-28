@@ -18,6 +18,8 @@ import com.mobilewe.wemobile.presentation.common.composables.button.ContinueButt
 import com.mobilewe.wemobile.presentation.common.composables.modalSheet.WeSaccoModalSheet
 import com.mobilewe.wemobile.presentation.common.composables.textfield.AccountTypeTextField
 import com.mobilewe.wemobile.presentation.common.composables.textfield.RideOutlinedTextField
+import com.mobilewe.wemobile.resources.Resources
+import org.koin.compose.viewmodel.koinViewModel
 
 
 @Composable
@@ -33,7 +35,7 @@ fun DepositScreen(
 fun DepositScreenContent(
     navigateBack: ()->Unit
 ) {
-    val depositScreenViewModel: DepositScreenViewModel = viewModel()
+    val depositScreenViewModel: DepositScreenViewModel = koinViewModel()
     val depositState by depositScreenViewModel.state.collectAsState()
     var isSheetOpen by rememberSaveable { mutableStateOf(false) }
     var currentBottomSheet: DepositBottomSheetType? by remember { mutableStateOf(null) }
@@ -58,7 +60,7 @@ fun DepositScreenContent(
         RideOutlinedTextField(
             value = depositState.amount,
             onValueChange = depositScreenViewModel::onAmountChanged,
-            hint = "stringResource(id = R.string.amount)",
+            hint = Resources.strings.amount,
             keyboardType = KeyboardType.Number
         )
 

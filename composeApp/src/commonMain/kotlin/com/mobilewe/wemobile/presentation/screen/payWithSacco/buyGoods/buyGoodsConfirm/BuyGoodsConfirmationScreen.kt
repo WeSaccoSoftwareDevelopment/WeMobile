@@ -11,7 +11,6 @@ import androidx.compose.ui.unit.dp
 import com.mobilewe.wemobile.domain.model.Merchant
 import com.mobilewe.wemobile.presentation.common.composables.appbar.AppToolbar
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BuyGoodsConfirmationScreen(
     merchant: Merchant

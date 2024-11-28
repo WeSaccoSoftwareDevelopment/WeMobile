@@ -32,135 +32,132 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.mobilewe.wemobile.presentation.common.composables.CategoryTabs
 import com.mobilewe.wemobile.presentation.common.composables.appbar.AppToolbar
+import com.mobilewe.wemobile.presentation.common.navigation.TransactDes
 import com.mobilewe.wemobile.presentation.common.theme.WeThemes
+import com.mobilewe.wemobile.presentation.screen.home.composable.HomeScreenHeader
 import com.mobilewe.wemobile.presentation.screen.transactions.composable.TransactCardItem
 import org.koin.compose.viewmodel.koinViewModel
 
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NewTransactionScreen(
     navController: NavController = rememberNavController()
 ) {
     val transactViewModel: TransactViewModel = koinViewModel()
     val newTransactUiState by transactViewModel.newTransactUiState.collectAsStateWithLifecycle()
-    val isRemittanceCategory = newTransactUiState.selectedCategory == "Remittance"
+    val isRemittanceCategory = newTransactUiState.selectedCategory == "All"
 
 
-    Scaffold(
+    HomeScreenHeader(
         topBar = {
             AppToolbar(
                 title = "Transact",
-                showBackArrow = true
+                showBackArrow = true,
+                navigateBack = { navController.popBackStack()}
             )
         },
-    ) { paddingValues ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(horizontal = 12.dp)
-                .padding(paddingValues)
+    ) {
+
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(3),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
 
-                LazyVerticalGrid(
-                    columns = GridCells.Fixed(3),
-                    verticalArrangement = Arrangement.spacedBy(12.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+            item(span = { GridItemSpan(3) }) {
+                Box(
+                    modifier = Modifier.fillMaxWidth(),
+                    contentAlignment = Alignment.TopStart
                 ) {
-
-                    item(span = { GridItemSpan(3) }) {
-                        Box(
-                            modifier = Modifier.fillMaxWidth(),
-                            contentAlignment = Alignment.TopStart
-                        ) {
-                            Text(
-                                text = "Here are some things you can do",
-                                fontSize = 20.sp,
-                                fontWeight = FontWeight.Bold,
-                                textAlign = TextAlign.Start
-                            )
-                        }
-                    }
-
-                    item(span = { GridItemSpan(3) }) {
-                        CategoryTabs(
-                            categories = newTransactUiState.categories,
-                            selectedCategory = newTransactUiState.selectedCategory,
-                            onCategorySelected = { transactViewModel.selectCategory(it) }
-                        )
-                    }
-
-
-                    if (newTransactUiState.selectedCategory == "All") {
-                        val groupedProducts = newTransactUiState.transactProducts.groupBy { it.category }
-                        groupedProducts.forEach { (category, products) ->
-                            item(span = { GridItemSpan(3) }) {
-                                Text(
-                                    text = category,
-                                    fontWeight = FontWeight.SemiBold,
-                                    style = WeThemes.typography.titleLarge,
-                                    modifier = Modifier.padding(vertical = 8.dp)
-                                )
-                            }
-                            items(products.size) { index ->
-                                val product = products[index]
-                                TransactCardItem(
-                                    text = product.text,
-                                    icon = product.icon,
-                                    onClick = { sendMoneyOption ->
-                                        when (sendMoneyOption) {
-//                                            R.string.send_money -> navController.navigate(SEND_MONEY_SCREEN_ROUTE)
-//                                            R.string.bank_transfer -> navController.navigate(BANK_TRANSFER_SCREEN_ROUTE)
-//                                            R.string.withdraw -> navController.navigate(WITHDRAW_SCREEN_ROUTE)
-//                                            R.string.loan -> navController.navigate(LOANS_SCREEN_ROUTE)
-//                                            R.string.deposit -> navController.navigate(DEPOSIT_SCREEN_ROUTE)
-//                                            R.string.buy_airtime -> navController.navigate(BUY_AIRTIME_ROUTE)
-//                                            R.string.bill_pay_and_till_pay_hint -> navController.navigate(PAY_WITH_SACCO_SCREEN_ROUTE)PAY_WITH_SACCO_SCREEN_ROUTE
-                                        }
-                                    },
-                                )
-                            }
-                        }
-                    } else {
-                        item(span = { GridItemSpan(3) }) {
-                            newTransactUiState.selectedCategory?.let {
-                                Text(
-                                    text = it,
-                                    fontWeight = FontWeight.SemiBold,
-                                    style = WeThemes.typography.titleLarge,
-                                    modifier = Modifier.padding(vertical = 8.dp)
-                                )
-                            }
-                        }
-                        items(newTransactUiState.selectedProducts.size) { index ->
-                            val product = newTransactUiState.selectedProducts[index]
-                            TransactCardItem(
-                                text = product.text,
-                                icon = product.icon,
-                                showDrawableColorTint = isRemittanceCategory,
-                                onClick = { sendMoneyOption ->
-                                    when (sendMoneyOption) {
-                                        "R.string.send_money" ->{}
-                                        "R.string.bank_transfer" -> {}
-                                       " R.string.withdraw" -> {}
-                                       " R.string.loan" -> {}
-                                       " R.string.deposit" -> {}
-                                       " R.string.buy_airtime" -> {}
-                                       " R.string.bill_pay_and_till_pay_hint "-> {}
-                                    }
-                                },
-                            )
-                        }
-                    }
-
-                    item(span = { GridItemSpan(3) }) {
-                        Spacer(modifier = Modifier.height(12.dp))
-                    }
-
+                    Text(
+                        text = "Here are some things you can do",
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Start
+                    )
                 }
             }
 
+            item(span = { GridItemSpan(3) }) {
+                CategoryTabs(
+                    categories = newTransactUiState.categories,
+                    selectedCategory = newTransactUiState.selectedCategory,
+                    onCategorySelected = { transactViewModel.selectCategory(it) }
+                )
+            }
+
+
+            if (newTransactUiState.selectedCategory == "All") {
+                val groupedProducts = newTransactUiState.transactProducts.groupBy { it.category }
+                groupedProducts.forEach { (category, products) ->
+                    item(span = { GridItemSpan(3) }) {
+                        Text(
+                            text = category,
+                            fontWeight = FontWeight.SemiBold,
+                            style = WeThemes.typography.titleLarge,
+                            modifier = Modifier.padding(vertical = 8.dp)
+                        )
+                    }
+                    items(products.size) { index ->
+                        val product = products[index]
+                        TransactCardItem(
+                            text = product.text,
+                            icon = product.icon,
+                            onClick = { sendMoneyOption ->
+                                when (sendMoneyOption) {
+                                    "Send Money" -> { navController.navigate(TransactDes.SendMoney)}
+                                    "Bank Transfer" -> { navController.navigate(TransactDes.BankTransfer)}
+                                    "Withdraw" -> { navController.navigate(TransactDes.Withdraw)}
+                                    "Loan" -> { navController.navigate(TransactDes.Loans)}
+                                    "Deposit" -> { navController.navigate(TransactDes.Deposit)}
+                                    "Buy Airtime" -> { navController.navigate(TransactDes.BuyAirtime)}
+                                    "Savings" -> { navController.navigate(TransactDes.Savings)}
+                                    "Pay Bill & Buy Goods" -> { navController.navigate(TransactDes.PayWithSacco)}
+                                }
+                            },
+                        )
+                    }
+                }
+            } else {
+                item(span = { GridItemSpan(3) }) {
+                    newTransactUiState.selectedCategory?.let {
+                        Text(
+                            text = it,
+                            fontWeight = FontWeight.SemiBold,
+                            style = WeThemes.typography.titleLarge,
+                            modifier = Modifier.padding(vertical = 8.dp)
+                        )
+                    }
+                }
+                items(newTransactUiState.selectedProducts.size) { index ->
+                    val product = newTransactUiState.selectedProducts[index]
+                    TransactCardItem(
+                        text = product.text,
+                        icon = product.icon,
+                        showDrawableColorTint = isRemittanceCategory,
+                        onClick = { sendMoneyOption ->
+                            when (sendMoneyOption) {
+                                "Send Money" -> { navController.navigate(TransactDes.SendMoney)}
+                                "Bank Transfer" -> { navController.navigate(TransactDes.BankTransfer)}
+                                "Withdraw" -> { navController.navigate(TransactDes.Withdraw)}
+                                "Loan" -> { navController.navigate(TransactDes.Loans)}
+                                "Deposit" -> { navController.navigate(TransactDes.Deposit)}
+                                "Buy Airtime" -> { navController.navigate(TransactDes.BuyAirtime)}
+                                "Savings" -> { navController.navigate(TransactDes.Savings)}
+                                "Pay Bill & Buy Goods" -> { navController.navigate(TransactDes.PayWithSacco)}
+                            }
+                        },
+                    )
+                }
+            }
+
+            item(span = { GridItemSpan(3) }) {
+                Spacer(modifier = Modifier.height(12.dp))
+            }
+
         }
+    }
+
 }
 
 

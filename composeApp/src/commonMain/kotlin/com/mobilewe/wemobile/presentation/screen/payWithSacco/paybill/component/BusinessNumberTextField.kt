@@ -13,6 +13,9 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.mobilewe.wemobile.presentation.common.composables.textfield.RideOutlinedTextField
 import com.mobilewe.wemobile.utils.clickableWithoutRipple
+import org.jetbrains.compose.resources.stringResource
+import wemobile.composeapp.generated.resources.Res
+import wemobile.composeapp.generated.resources.businessNumber
 
 @Composable
 fun BusinessNumberTextField(
@@ -28,7 +31,7 @@ fun BusinessNumberTextField(
         value = businessNumber,
         onValueChange = onBusinessNumberChanged,
         keyboardType = KeyboardType.Phone,
-        hint = "stringResource(id = R.string.businessNumber)",
+        hint = stringResource(Res.string.businessNumber),
         supportText = businessName,
         trailingIcon = {
             Icon(

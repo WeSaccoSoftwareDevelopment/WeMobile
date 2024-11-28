@@ -20,7 +20,12 @@ import com.mobilewe.wemobile.presentation.common.composables.appbar.AppToolbar
 import com.mobilewe.wemobile.presentation.common.composables.button.ContinueButton
 import com.mobilewe.wemobile.presentation.common.composables.modalSheet.WeSaccoModalSheet
 import com.mobilewe.wemobile.presentation.common.composables.textfield.AccountTypeTextField
+import com.mobilewe.wemobile.resources.Resources
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
+import wemobile.composeapp.generated.resources.Res
+import wemobile.composeapp.generated.resources.allStringResources
+import wemobile.composeapp.generated.resources.buy_airtime
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -34,11 +39,6 @@ fun BuyAirtimeScreen(
     val shouldShowDialog = buyAirtimeState.shouldShowDialog
     var currentBottomSheet: BuyAirtimeModalSheetLayout? by remember { mutableStateOf(null) }
     val sheetState = rememberModalBottomSheetState()
-
-
-
-
-
 
     if (shouldShowDialog) {
         BuyAirtimeDialog(
@@ -58,14 +58,14 @@ fun BuyAirtimeScreen(
     MainBackgroundHeader(
         topBar = {
             AppToolbar(
-                title = "Buy Airtime ",
+                title = stringResource(Res.string.buy_airtime),
                 showBackArrow = true,
                 navigateBack = { navController.popBackStack() }
             )
         },
         bottomBar = {
             ContinueButton(
-                text = "stringResource(id = R.string.continuee)",
+                text =  Resources.strings.continuee,
                 onClick = {
                     buyAirtimeViewModel.onShouldShowDialog(true)
                 },

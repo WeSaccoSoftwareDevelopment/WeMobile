@@ -41,7 +41,7 @@ fun HeadFirstCard(
                 .padding(paddingValues)
                 .padding(16.dp)
                 .clip(shape = RoundedCornerShape(WeThemes.radius.medium))
-                .background(MaterialTheme.colorScheme.surface)
+                .background(MaterialTheme.colorScheme.background)
                 .padding(horizontal = 16.dp, vertical = 32.dp)
         ) {
             Box(modifier = Modifier) {

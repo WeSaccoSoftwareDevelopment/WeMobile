@@ -52,15 +52,11 @@ fun LoginScreen(
 
 
     HeadFirstCard(
-        textHeader = Resources.strings.loginWelcomeMessage,
-        textSubHeader = Resources.strings.loginSubWelcomeMessage,
         topAppBar = {
             AppToolbar(
                 title = "Welcome Back",
-                navigateBack = { navigateBack() },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceTint
-                ),
+                navigateBack = navigateBack,
+                showBackArrow = true
             )
         }
     ) {

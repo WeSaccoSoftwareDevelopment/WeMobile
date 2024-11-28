@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.mobilewe.wemobile.presentation.common.theme.WeThemes
+import com.mobilewe.wemobile.resources.Resources
 
 
 @Composable
@@ -50,25 +51,25 @@ fun LoanTextView(
                     verticalArrangement = Arrangement.Center,
                 ) {
                     Text(
-                        text = "stringResource(id = R.string.loan)",
+                        text = Resources.strings.loan,
                         color = MaterialTheme.colorScheme.onSurface,
                         style = WeThemes.typography.labelSmall
                     )
                     Spacer(modifier = Modifier.height(12.dp))
                     Text(
-                        text = "stringResource(id = R.string.loan_balance)",
+                        text = Resources.strings.loanBalance,
                         style = WeThemes.typography.labelSmall
                     )
                     Spacer(modifier = Modifier.height(5.dp))
 
                     Text(
-                        text = "stringResource(id = R.string.limit)",
+                        text = Resources.strings.limit,
                         style = WeThemes.typography.labelSmall
                     )
                     Spacer(modifier = Modifier.height(5.dp))
 
                     Text(
-                        text = "stringResource(id = R.string.due_date)",
+                        text = Resources.strings.dueDate,
                         style = WeThemes.typography.labelSmall
                     )
                     Spacer(modifier = Modifier.height(5.dp))

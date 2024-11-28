@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.mobilewe.wemobile.presentation.common.composables.textfield.RideOutlinedTextField
+import com.mobilewe.wemobile.resources.Resources
 import dev.icerock.moko.permissions.PermissionState
 
 @Composable
@@ -27,7 +28,7 @@ fun PhoneNumberField(
         value = phoneNumber,
         onValueChange = onPhoneNumberChange,
         keyboardType = KeyboardType.Phone,
-        hint = "stringResource(id = R.string.phoneNumber)",
+        hint = Resources.strings.phoneNumber,
         trailingIcon = {
             Icon(
                 imageVector = Icons.Outlined.Search,

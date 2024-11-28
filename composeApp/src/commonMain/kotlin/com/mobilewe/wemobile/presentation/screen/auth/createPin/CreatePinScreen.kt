@@ -11,6 +11,7 @@ import com.mobilewe.wemobile.presentation.common.composables.WsBrandBackgroundCo
 import com.mobilewe.wemobile.presentation.common.composables.appbar.AppToolbar
 import com.mobilewe.wemobile.presentation.common.composables.button.ContinueButton
 import com.mobilewe.wemobile.presentation.common.composables.textfield.WsTextField
+import com.mobilewe.wemobile.resources.Resources
 
 
 @Composable
@@ -41,7 +42,7 @@ fun CreatePinContent(
             textSubHeader = "",
             topAppBar = {
                 AppToolbar(
-                    title = "Create Pin",
+                    title = Resources.strings.confirmPin,
                     showForwardArrow = true,
                     navigateBack = {}
                 )
@@ -50,8 +51,8 @@ fun CreatePinContent(
             WsTextField(
                 text = pin,
                 onValueChange = { setPin(it) },
-                hint = "stringResource(id = R.string.pin_hint)",
-                label = "stringResource(id = R.string.pin_hint)",
+                hint = Resources.strings.pin,
+                label = Resources.strings.pinHint,
                 keyboardType = KeyboardType.NumberPassword,
                 errorMessage = viewModel.passwordError.value,
                 maxLength = 4
@@ -61,8 +62,8 @@ fun CreatePinContent(
                 text = confirmPin,
                 onValueChange = { setConfirmPin(it) },
                 keyboardType = KeyboardType.NumberPassword,
-                label = "stringResource(id = R.string.confirmPin)",
-                hint = "stringResource(id = R.string.confirmPin)",
+                label = Resources.strings.confirmNewPin,
+                hint = Resources.strings.confirmPin,
                 errorMessage = viewModel.passwordError.value,
                 maxLength = 4
             )

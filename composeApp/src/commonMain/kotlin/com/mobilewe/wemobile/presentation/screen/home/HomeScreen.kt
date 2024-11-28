@@ -32,7 +32,10 @@ import com.mobilewe.wemobile.presentation.screen.home.model.getHomeItems
 import com.mobilewe.wemobile.presentation.screen.home.model.getPayBillMerchants
 import com.mobilewe.wemobile.presentation.screen.home.model.getPaySomeone
 import com.mobilewe.wemobile.resources.Resources
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
+import wemobile.composeapp.generated.resources.Res
+import wemobile.composeapp.generated.resources.general
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -55,7 +58,7 @@ fun HomeScreen(
     val paymentOption = getPaySomeone(navController)
 
     HomeScreenHeader(
-        topBar = { HomeTopBar() }
+        topBar = { HomeTopBar(greetings = stringResource(Res.string.general)) }
     ) {
         AccountTypeScreenContent(
             navController = navController

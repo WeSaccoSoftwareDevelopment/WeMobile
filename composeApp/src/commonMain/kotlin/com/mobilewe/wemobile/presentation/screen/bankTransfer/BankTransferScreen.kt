@@ -37,7 +37,11 @@ fun BankTransferScreen(
 
     MainBackgroundHeader(
         topBar = {
-            AppToolbar(title = "Bank Transfer")
+            AppToolbar(
+                title = "Bank Transfer",
+                showBackArrow = true,
+                navigateBack = { navController.popBackStack()}
+            )
         }
     ) {
         AccountTypeDropDown(

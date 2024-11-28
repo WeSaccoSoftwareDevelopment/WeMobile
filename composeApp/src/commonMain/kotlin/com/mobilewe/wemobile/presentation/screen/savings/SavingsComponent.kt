@@ -25,6 +25,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.jetbrains.compose.resources.stringResource
+import wemobile.composeapp.generated.resources.Res
+import wemobile.composeapp.generated.resources.learn_more
+import wemobile.composeapp.generated.resources.open_an_account
 
 
 @Composable
@@ -68,7 +72,7 @@ fun SavingsComponent(
                 ) {
                     TextButton(onClick = { onClickLearnMore()}) {
                         Text(
-                            text = "stringResource(id = R.string.learn_more)",
+                            text = stringResource(Res.string.learn_more),
                             color = MaterialTheme.colorScheme.primary
                         )
                     }
@@ -81,7 +85,7 @@ fun SavingsComponent(
                         )
                     ) {
                         Text(
-                            text = "stringResource(id = R.string.open_an_account)",
+                            text = stringResource(Res.string.open_an_account),
                             textAlign = TextAlign.Center,
                             color = MaterialTheme.colorScheme.onBackground
                         )

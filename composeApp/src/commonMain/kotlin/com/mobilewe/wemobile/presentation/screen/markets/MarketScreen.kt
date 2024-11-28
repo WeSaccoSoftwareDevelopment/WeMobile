@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.mobilewe.wemobile.presentation.common.composables.appbar.AppToolbar
+import com.mobilewe.wemobile.presentation.screen.home.composable.HomeScreenHeader
 import com.mobilewe.wemobile.presentation.screen.markets.composable.AnimatedCardPager
 import com.mobilewe.wemobile.presentation.screen.markets.composable.MarketTypeCard
 import com.mobilewe.wemobile.presentation.screen.markets.composable.getCardImages
@@ -24,56 +25,50 @@ import com.mobilewe.wemobile.presentation.screen.markets.composable.marketTypeOp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MarketScreen(
-    navigateBack:()->Unit = {}
+    navigateBack: () -> Unit = {}
 ) {
     val cardsItems = getCardImages()
-    Scaffold(
+    HomeScreenHeader(
         topBar = {
             AppToolbar(
-                title = "Market"
+                title = "Market",
+                showBackArrow = true
             )
         },
-    ) { paddingValues ->
+    ) {
 
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(paddingValues)
-                .padding(horizontal = 16.dp),
+        LazyVerticalGrid(
+            columns = GridCells.Adaptive(170.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
         ) {
-
-            LazyVerticalGrid(
-                columns = GridCells.Adaptive(170.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                ) {
-                    item(span = { GridItemSpan(this.maxCurrentLineSpan) }) {
-                        Spacer(modifier = Modifier.height(16.dp))
-                    }
-                    items(marketTypeOption.size) { index ->
-                        MarketTypeCard(
-                            title = marketTypeOption[index].title,
-                            subTitle = marketTypeOption[index].subTitle,
-                            imageResourceId = marketTypeOption[index].imageResourceId,
-                            containerColor = marketTypeOption[index].containerColor,
-                            onClick = { marketTypeOption ->
-                                when (marketTypeOption) {
-//                                 R.string.privacy ->{}
-                                }
-                            },
-                        )
-                    }
-
-                    item(span = { GridItemSpan(this.maxCurrentLineSpan) }) {
-                        Spacer(modifier = Modifier.height(16.dp))
-                    }
-
-                    item(span = { GridItemSpan(this.maxCurrentLineSpan) }) {
-                        AnimatedCardPager(cards = cardsItems)
-                    }
-
-                }
+            item(span = { GridItemSpan(this.maxCurrentLineSpan) }) {
+                Spacer(modifier = Modifier.height(16.dp))
             }
+            items(marketTypeOption.size) { index ->
+                MarketTypeCard(
+                    title = marketTypeOption[index].title,
+                    subTitle = marketTypeOption[index].subTitle,
+                    imageResourceId = marketTypeOption[index].imageResourceId,
+                    containerColor = marketTypeOption[index].containerColor,
+                    onClick = { marketTypeOption ->
+                        when (marketTypeOption) {
+//                                 R.string.privacy ->{}
+                        }
+                    },
+                )
+            }
+
+            item(span = { GridItemSpan(this.maxCurrentLineSpan) }) {
+                Spacer(modifier = Modifier.height(16.dp))
+            }
+
+            item(span = { GridItemSpan(this.maxCurrentLineSpan) }) {
+                AnimatedCardPager(cards = cardsItems)
+            }
+
+        }
+
     }
 }
 

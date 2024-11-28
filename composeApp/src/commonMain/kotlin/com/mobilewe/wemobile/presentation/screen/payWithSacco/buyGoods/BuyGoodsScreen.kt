@@ -31,6 +31,7 @@ import com.mobilewe.wemobile.presentation.common.composables.textfield.RideOutli
 import org.koin.compose.viewmodel.koinViewModel
 import com.mobilewe.wemobile.presentation.screen.payWithSacco.buyGoods.components.TillNumberDropDown
 import com.mobilewe.wemobile.presentation.screen.payWithSacco.buyGoods.components.BuyGoodsDialog
+import com.mobilewe.wemobile.resources.Resources
 
 
 @Composable
@@ -54,7 +55,6 @@ fun BuyGoodsContentScreen(
     val focusRequester = remember { FocusRequester() }
     var isSheetOpen by rememberSaveable { mutableStateOf(false) }
     var currentBottomSheet: BuyGoodsSheetModalType? by remember { mutableStateOf(null) }
-    val bankTransferState by buyGoodsViewModel.state.collectAsState()
     val sheetState = rememberModalBottomSheetState()
 
     LaunchedEffect(key1 = currentPage) {
@@ -109,7 +109,7 @@ fun BuyGoodsContentScreen(
         RideOutlinedTextField(
             value = state.amount,
             onValueChange = { buyGoodsViewModel.onAmountChanged(it) },
-            hint = "stringResource(id = R.string.amount)",
+            hint = Resources.strings.amount,
             maxLength = 7,
             keyboardType = KeyboardType.Number,
         )
@@ -118,7 +118,7 @@ fun BuyGoodsContentScreen(
 
         Box {
             ContinueButton(
-                text = "stringResource(id = R.string.continuee)",
+                text = Resources.strings.continuee,
                 onClick = {
                     buyGoodsViewModel.onContinueButtonClicked()
                 },

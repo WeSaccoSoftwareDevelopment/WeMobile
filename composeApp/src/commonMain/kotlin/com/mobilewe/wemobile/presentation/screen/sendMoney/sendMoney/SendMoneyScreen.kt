@@ -29,6 +29,7 @@ import com.mobilewe.wemobile.presentation.common.composables.textfield.AccountTy
 import com.mobilewe.wemobile.presentation.common.composables.textfield.RideOutlinedTextField
 import com.mobilewe.wemobile.presentation.common.composables.textfield.SendMoneyProviderTextField
 import com.mobilewe.wemobile.presentation.screen.sendMoney.components.SendMoneyDialog
+import com.mobilewe.wemobile.resources.Resources
 import com.mobilewe.wemobile.utils.clickableWithoutRipple
 import org.koin.compose.viewmodel.koinViewModel
 
@@ -54,14 +55,14 @@ fun SendMoneyMainScreen(
     MainBackgroundHeader(
         topBar = {
             AppToolbar(
-                title = "stringResource(id = R.string.send_money)",
+                title = "Send Money",
                 showBackArrow = true,
-                navigateBack = onNavigateBack
+                navigateBack = onNavigateBack,
             )
         },
         bottomBar = {
             ContinueButton(
-                text = "stringResource(id = R.string.continuee)",
+                text = Resources.strings.continuee,
                 onClick = {
                     sendMoneyViewModel.setShowDialogState(true)
                 },
@@ -121,8 +122,8 @@ fun SendMoneyMainScreen(
             value = sendMoneyState.amount,
             onValueChange = sendMoneyViewModel::onAmountChanged,
             keyboardType = KeyboardType.Number,
-            hint = "stringResource(id = R.string.amount)",
-            supportText = "stringResource(id = R.string.amount_support_text)"
+            hint = Resources.strings.amount,
+            supportText = "Minimum 1"
         )
 
 
@@ -159,7 +160,7 @@ fun PhoneNumberTextField(
             value = sendMoneyScreenUiState.phoneNumber,
             onValueChange = { onPhoneNumberChanged(it) },
             keyboardType = KeyboardType.Phone,
-            hint = "stringResource(id = R.string.phoneNumber)",
+            hint =  Resources.strings.phoneNumber,
             trailingIcon = {
                 Icon(
                     imageVector = Icons.Outlined.Search,

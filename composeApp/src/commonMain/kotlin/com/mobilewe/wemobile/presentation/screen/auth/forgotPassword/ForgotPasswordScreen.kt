@@ -24,6 +24,7 @@ import androidx.navigation.NavController
 import com.mobilewe.wemobile.presentation.common.composables.appbar.AppToolbar
 import com.mobilewe.wemobile.presentation.common.composables.button.TwoButtons
 import com.mobilewe.wemobile.presentation.common.composables.textfield.WsTextField
+import com.mobilewe.wemobile.resources.Resources
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -39,9 +40,6 @@ fun ForgotPasswordScreen(
                 title = "Forgot Password",
                 showForwardArrow = true,
                 navigateBack = { navController.popBackStack()},
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceTint
-                )
             )
         },
 
@@ -58,14 +56,14 @@ fun ForgotPasswordScreen(
             WsTextField(
                 text = forgotPasswordUiState.email,
                 onValueChange = forgotPasswordViewModel::onEmailChanged,
-                hint = "stringResource(id = R.string.email_hint)",
-                label = "stringResource(id = R.string.email_hint)",
+                hint = Resources.strings.emailHint,
+                label = Resources.strings.emailHint,
                 keyboardType = KeyboardType.Email
             )
             Spacer(modifier = Modifier.height(16.dp))
             TwoButtons(
-                leftButtonText = "stringResource(id = R.string.cancel)",
-                rightButtonText = "stringResource(id = R.string.continuee)",
+                leftButtonText = "Cancel",
+                rightButtonText = Resources.strings.continuee,
                 onLeftButtonClick = { },
                 onRightButtonClick = { },
                 enableRightButton = forgotPasswordUiState.email.isNotEmpty()

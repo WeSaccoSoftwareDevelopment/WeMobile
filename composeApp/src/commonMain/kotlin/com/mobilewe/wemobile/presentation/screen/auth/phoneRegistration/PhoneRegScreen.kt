@@ -60,9 +60,6 @@ fun PhoneRegScreen(
                 title = "Let get started with SaccoMobile",
                 showBackArrow = true,
                 navigateBack = { },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceTint
-                )
             )
         }
     ) {
@@ -76,7 +73,7 @@ fun PhoneRegScreen(
             text = phoneRegUiState.phoneNumber,
             label = Resources.strings.mobileNumber,
             onValueChange = viewModel::onPhoneNumberChanged,
-            hint = "stringResource(id = R.string.mobile_number_hint)",
+            hint = Resources.strings.phoneNumber,
             keyboardType = KeyboardType.Phone,
             leadingIconComponent = {
                 Text(text = phoneRegUiState.countryCode)
@@ -85,7 +82,7 @@ fun PhoneRegScreen(
 
         ContinueButton(
             onClick = viewModel::onNextButtonClicked,
-            text = "stringResource(id = R.string.continuee)",
+            text = Resources.strings.continuee,
             enable = phoneRegUiState.phoneNumber.isNotEmpty()
         )
 

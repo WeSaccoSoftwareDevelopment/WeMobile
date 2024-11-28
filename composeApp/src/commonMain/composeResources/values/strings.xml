@@ -1,0 +1,565 @@
+<resources>
+    <string name="app_name">WeMobile</string>
+
+    <string name="password_visible_content_description">Hide password</string>
+    <string name="password_hidden_content_description">Show password</string>
+    <string name="password">Password</string>
+
+
+    <!--    PayBill-->
+    <string name="payBillNumber">PayBill Number</string>
+    <string name="accountNumber">Account Number</string>
+    <string name="payBillAmount">Amount</string>
+
+    <!--    PIN-->
+    <string name="pin_hint">Create Pin</string>
+    <string name="confirmPin">Confirm Pin</string>
+    <string name="current_pin">Current Pin</string>
+    <string name="new_pin">New Pin</string>
+    <string name="confirmNewPin">Confirm New Pin</string>
+
+    <!--    Create Password-->
+    <string name="current_password">Current Password</string>
+    <string name="confirmNewPassword">Confirm New Password</string>
+    <string name="new_password">New Password</string>
+
+
+    <string name="transaction">Transaction</string>
+    <string name="submit">Submit</string>
+    <string name="user_profile">UserProfile</string>
+    <string name="amount">Amount</string>
+    <string name="min_amount">minimum amount 5</string>
+    <string name="pay_with_sacco">Pay with RideSacco</string>
+    <string name="help_center">HELP</string>
+    <string name="app_theme">App</string>
+    <string name="turn_on_incognito">App</string>
+    <string name="app_language">Language</string>
+    <string name="settings">Setting</string>
+    <string name="drive_mode">Drive Mode</string>
+    <string name="child_mode">Chidl Note</string>
+    <string name="time_watched">Time Watch</string>
+    <string name="account_data">Account Data</string>
+    <string name="rate_us_on_play_store">Rate</string>
+    <string name="feedback">Feedbacck</string>
+    <string name="forum">Forum</string>
+
+    <string name="privacy_policy">Policy Privacy</string>
+    <string name="terms_of_service">Terms</string>
+    <string name="night_light">Night</string>
+
+    <!--    Transaction -->
+    <string name="phoneNumber">Phone Number</string>
+    <string name="buy_airtime">Buy Airtime</string>
+    <string name="buy_airtime_home_title">Buy airtime</string>
+    <string name="tillNumber">Till Number</string>
+    <string name="businessNumber">Business Number</string>
+    <string name="sendMoney">Send Money</string>
+    <string name="deposit">Deposit</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="paybill">Pay Bills</string>
+    <string name="buygoods">Buy Goods</string>
+    <string name="buy_goods">Buy Goods</string>
+    <string name="send_money">Send Money</string>
+    <string name="savings">Savings</string>
+    <string name="our_market">Market</string>
+    <string name="loan">Loan</string>
+    <string name="bill_pay_and_till_pay_hint"><![CDATA[Bill & Till Pay]]></string>
+    <string name="bus_travel_hint">Bus</string>
+    <string name="flight_hint">Flight</string>
+    <string name="train_hint">Train</string>
+    <string name="hotel_hint">Hotel</string>
+
+
+    <!--    Transact-->
+    <string name="schedule_payment">Schedule payment</string>
+
+    <string name="add_favourite">Add a favorite</string>
+    <string name="favorite">Favorite</string>
+    <string name="own_equity_account">Own Equity account</string>
+    <string name="another_equity_account">Another Equity account</string>
+    <string name="pay_top_up">Pay to card</string>
+    <string name="credit_prepaid">Credit and prepaid cards</string>
+    <string name="mobile_wallet">Mobile money</string>
+    <string name="send_to_mobile">Send to mobile money providers</string>
+    <string name="another_bank">Another Bank</string>
+    <string name="pay_bill">Pay bill</string>
+    <string name="withdraw_hint">Withdraw</string>
+    <!--    <string name="bill_pay_and_till_pay_hint">Bill</string>-->
+    <!--    -->
+
+    <string name="prompt_info_title">Sample App Authentication \n</string>
+    <string name="prompt_info_subtitle">Please login to get access</string>
+    <string name="prompt_info_description">Sample App is using Android biometric authentication</string>
+    <string name="prompt_info_use_app_password">Use app password</string>
+    <string name="continuee">Continue</string>
+    <string name="sacco_app">Authenticate with your fingerprint</string>
+
+    <!--    Loan-->
+    <string name="loan_statement">Statement</string>
+    <string name="request_loan">Request Loan</string>
+    <string name="pay_loan">Pay Loan</string>
+    <string name="recent_transaction">Recent Transaction</string>
+
+    <!--    Register-->
+    <string name="search">Search</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="your_balane">Your Balance</string>
+    <string name="check_all_transaction">See all transactions</string>
+    <string name="manage_pin">Manage Pin</string>
+    <string name="check_sacco_statement">Sacco Statement</string>
+    <string name="electronics">Electronics</string>
+    <string name="loan_balance">Balance:</string>
+    <string name="limit">Limit</string>
+    <string name="due_date">Due Date</string>
+    <string name="sign_in">Sign In</string>
+
+    <!--    Register-->
+    <string name="email_or_mobile_number">Email or Mobile Number</string>
+    <string name="email_hint">Email </string>
+    <string name="user_register_names_hint">Enter your full Name </string>
+    <string name="mobile_number_hint">Enter your Mobile Number</string>
+    <string name="id_number_hint">ID Number</string>
+    <string name="confirmPassword">Confirm Password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_pin">ENTER PIN TO UNLOCK</string>
+    <string name="account">Account</string>
+    <string name="shop_header_text">We\'d like to show some more about our Sacco</string>
+    <string name="amount_support_text">Minimum amount is Ksh 1</string>
+    <string name="transaction_detail">Transaction Detail</string>
+    <string name="recepient_no">Payment Reference</string>
+    <string name="dete">Date/Time</string>
+
+    <!--   Statement-->
+    <string name="money_in">Money In</string>
+    <string name="money_out">Money Out</string>
+    <string name="money_balance">Balance</string>
+    <string name="transaction_type">Transaction Type</string>
+    <string name="total_amount">Total</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="statement">Statement</string>
+
+    <!-- ONBOARDING VARIANT_1 -->
+    <string name="onboarding_one_title">Lend,Save,Spend,Send and Pay Bills with Ease!</string>
+    <string name="onboarding_one_description">Our app is designed to help you manage your money with ease, so sign up now and start taking control of your financial future!</string>
+    <string name="onboarding_two_title">Manage Your Money Better with Our Finance App!</string>
+    <string name="onboarding_two_description">Welcome to our finance app! Our powerful yet easy-to-use platform is designed to help you take control of your finances and make informed decisions.</string>
+    <string name="onboarding_three_title">Msaidizi Wako Binafsi wa Kikundi cha Sacco </string>
+    <string name="onboarding_three_description">App yetu ni kama kuwa na msaidizi binafsi wa kikundi cha Sacco, kwenye kifaa chako cha mkononi. Kwa huduma zetu zenye nguvu, utaweza kudhibiti pesa zako kwa urahisi.</string>
+
+
+
+    <!-- ONBOARDING VARIANT_2 -->
+    <string name="welcome_to_sacco">Hello, welcome to Sacco Community.</string>
+    <string name="welcome_title_one">Welcome to WeSacco</string>
+    <string name="welcome_sub_one">Our Sacco community app is designed to help you connect with fellow members, contribute to your savings and investments, and pay bills with ease.</string>
+    <string name="welcome_title_two">Woohoo! You\'re exactly who we\'ve been looking for!</string>
+
+    <string name="welcome_title_three">We\'ve got you covered!</string>
+    <string name="welcome_sub_two">Here\'s a couple of things to get you excited about RideSacco.</string>
+    <string name="intro_feature_one_title">Simplify your financial life with our App!</string>
+    <string name="intro_feature_one_desc">Our app makes managing your money easy. With intuitive interface and features, you\'ll be able to keep track of your spending and savings effortlessly.</string>
+    <string name="intro_feature_two_title">Take control of your Sacco finances </string>
+    <string name="intro_feature_two_desc">Manage and spend from  your sacco and mobile money accounts from Our App.</string>
+    <string name="intro_feature_three_title">Safer by design</string>
+    <string name="intro_feature_three_desc">We leveraged Android\'s built in security designs to keep your information secure at all times.</string>
+    <string name="explore_btn_text">Continue without sign in</string>
+    <string name="continue_with_google">Continue with Google</string>
+
+    <!--   About We Sacco-->
+    <string name="about_sacco_ride">Welcome to WeSacco! We\'re committed to protecting your privacy and providing you with a great user experience. By using MyFinance, you agree to our Privacy Policy, Terms and Conditions, and Service Charter.</string>
+    <string name="sacco_privacy_policy">At WeSacco, we take your privacy seriously. We will never share your personal information with third parties without your consent. We use industry-standard security measures to protect your data and prevent unauthorized access. By using MyFinance, you agree to our Privacy Policy.</string>
+    <string name="sacco_term_and_condition">By using WeSacco, you agree to our Terms and Conditions. You must be at least 18 years old to use our services. You are responsible for keeping your account information up to date and secure. MyFinance reserves the right to suspend or terminate your account if you violate our policies or engage in illegal activity. We are not responsible for any losses or damages resulting from your use of our services.</string>
+    <string name="sacco_service_charter">At WeSacco, we are committed to providing you with high-quality service. Our goal is to make it easy for you to manage your finances and achieve your goals. If you have any questions or concerns, please contact us at support@myfinance.com.</string>
+    <string name="see_all">See all</string>
+    <string name="bank_transfer">Bank Transfer</string>
+    <string name="recipientProvider">Recipient Provider</string>
+    <string name="accountType">Account Type</string>
+    <string name="all_recpient_with_emoji">🌎 Mpesa</string>
+    <string name="recipient_with_emoji">%1$s  %2$s</string>
+    <string name="pin">Enter Pin</string>
+
+    <!--    Loans-->
+    <string name="enter_your_loan">Enter your PIN to access your Loans</string>
+    <string name="apply">Apply</string>
+
+    <!--    Calender Selection-->
+
+    <string name="select_finish_date_title">Select End Date</string>
+    <string name="today">Today</string>
+    <plurals name="finish_date">
+        <item quantity="one">%1$s (%2$s day)</item>
+        <item quantity="other">%1$s (%2$s days)</item>
+    </plurals>
+
+    <string name="not_found_email">not found\n</string>
+    <string name="copy_to_clipboard">copied to clopboard</string>
+
+    <!--    Savings-->
+    <string name="open_account">Open account</string>
+    <string name="goal_Saving">Goal Savings</string>
+    <string name="fixed_Saving">Fixed Savings</string>
+    <string name="target_savings">Target Savings</string>
+    <string name="goal_savings_description">This is goal saving description</string>
+
+
+    <!--    Create Password-->
+    <string name="password_hint">Enter password</string>
+    <string name="re_enter_password_hint">Re-enter your password</string>
+    <string name="create_password">Create password</string>
+    <string name="createPasswd_header">Create a strong password</string>
+    <string name="createPassword_hint">The harder the password, the better and safer</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password_title">Password</string>
+    <string name="validate_header">What is required?</string>
+    <string name="validateLetter">Must contain both numbers, uppercase and lowercase letters</string>
+    <string name="validateCharLong">Must be at least 8 characters long</string>
+    <string name="validate_specialChar"><![CDATA[Must contain a special character (e.g. !@#$&)]]></string>
+    <string name="passwordMatch">Password must match</string>
+
+    <!--    -->
+    <string name="pinValidate_header">How to create a secure PIN:</string>
+    <string name="validateSequence">Avoid number sequences(e.g. 1234 or 9876)</string>
+    <string name="validate_repetetive">Avoid using repetitive digits (e.g. 0000, 1111)</string>
+    <string name="verify_header">How would you like to get verified?</string>
+    <string name="about_saccoride">"About SaccoRide "</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="service_charter">Service Charter</string>
+
+    <!--    Accounts-->
+    <string name="logout">Logout</string>
+    <string name="share">Share</string>
+    <string name="save">Save</string>
+
+    <string name="notification_updates">Notification Updates</string>
+    <string name="security">Security</string>
+    <string name="language">Language</string>
+    <string name="help">Help Center</string>
+    <string name="send_money_2">Send Money</string>
+    <string name="share_receipt">Share Receipt</string>
+    <string name="download_receipt">Download Receipt</string>
+    <string name="yes_delete">Yes, Delete</string>
+    <string name="yes_logout">Yes, Logout</string>
+    <string name="cancel">Cancel</string>
+    <string name="faq">FAQ</string>
+    <string name="general">General</string>
+
+    <string name="biometric">Biometric setup</string>
+    <string name="light_theme">Light theme</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="system_theme">System Default</string>
+    <string name="material_you_theme">MaterialYou theme</string>
+    <string name="sign_in_with_touch_id">Sign in with Touch ID</string>
+
+
+
+    <string name="privacy">Privacy Policy</string>
+    <string name="about">About WeSacco</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="add_new_payment">Add New Payment</string>
+    <string name="transactions_status_updates">Transactions Status Updates</string>
+    <string name="fraud_alert">Fraud or suspicious activity alerts</string>
+    <string name="payment_requests">Payment request notifications</string>
+    <string name="card_activity">Card activity notifications</string>
+    <string name="customer_support">Customer support notification</string>
+    <string name="account_balance">Account balance alerts</string>
+    <string name="security_alert">Security alerts</string>
+    <string name="daily_weekly_summary">Daily or weekly summary</string>
+    <string name="app_updates"><![CDATA[App updates & enhancements]]></string>
+    <string name="promotional_offers"><![CDATA[Promotional offers & updates]]></string>
+    <string name="participate_servey">Participate in a survey</string>
+    <string name="biometric_id">Biometric ID</string>
+    <string name="remember_me">Remember me</string>
+    <string name="face_id">Face ID</string>
+    <string name="sms_authenticator">SMS Authenticator</string>
+    <string name="google_authenticator">Google Authenticator</string>
+    <string name="device_management">Device Management</string>
+    <string name="change_password">Change Password</string>
+    <string name="contact_support">Contact Support</string>
+
+    <!--    Savings-->
+
+    <string name="open_an_account">Open an account</string>
+    <string name="learn_more">Learn more</string>
+    <string name="savings_title">Grow your Money</string>
+    <string name="savings_description">WeSacco offers a variety of products that helps you save and invest your money to ensure you grow your wealth </string>
+    <string name="classic_savings_title">Classic savings</string>
+    <string name="classic_savings_subtitle">Save any amount as frequently as you can while earning a simple interest</string>
+    <string name="goal_savings_title">Goal savings</string>
+    <string name="goal_savings_subtitle">Set your goals and start saving towards them immediately while earning interest</string>
+    <string name="fixed_savings_title">Fixed deposit</string>
+    <string name="fixed_savings_subtitle">Access your deposit amount plus interest at the end of a fixed saving period</string>
+    <string name="call_savings_title">Call deposit</string>
+    <string name="call_savings_subtitle">Start saving and have immediate access to your funds plus interest,without any penalty</string>
+    <string name="select_hint">Select Option</string>
+    <string name="unlock_with_touch">Unlock with Touch ID</string>
+    <string name="device_management_subtitle">Manage the devices connected to your profile</string>
+    <string name="reset_pin_or_change_pin">Reset or Change your PIN</string>
+    <string name="manage_password">Change your Password</string>
+    <string name="reset_password_or_create_new">Reset,Change or Create Password</string>
+
+    <!--    Get in Touch-->
+    <string name="contact_us">Contact us</string>
+    <string name="wesacco_contact">+254 746 656 813</string>
+    <string name="email_us">Email us</string>
+    <string name="wesacco_email">info@wesacco.co.ke</string>
+    <string name="website">Visit our website</string>
+    <string name="wesacco_website">www.wesacco.co.ke</string>
+    <string name="twitter">Follow us on Twitter</string>
+    <string name="wessacco_twitter">\@WeSaccoKe</string>
+    <string name="facebook">Like us on Facebook</string>
+    <string name="wessacco_facebook">WeSaccoFb</string>
+    <string name="linkedin">Follow us on LinkedIn</string>
+    <string name="wessacco_linkedin">Wesacco Kenya</string>
+    <string name="instagram">Follow us on Instagram</string>
+    <string name="wessacco_instagram">Wesacco</string>
+
+    <!--    HomeScreen-->
+    <string name="request">Request</string>
+    <string name="top_up">Top Up</string>
+    <string name="user_account">My Account</string>
+    <string name="account_setting">Account Settings</string>
+    <string name="account_settings_subtitle">Change your sign details</string>
+    <string name="manage_your_notification">Manage your notification</string>
+    <string name="get_in_touch">Get in touch</string>
+    <string name="get_in_touch_subtile"><![CDATA[Email,call & social media]]></string>
+    <string name="manage_options">Manage options</string>
+    <string name="about_sacco_title">About WeSaccoMobile</string>
+    <string name="privacy_subtitle">Check privacy policy</string>
+    <string name="paysomeone">Pay someone</string>
+    <string name="paysome_description">To Wallet bank,or mobile number</string>
+    <string name="request_money">Request money</string>
+    <string name="request_money_desc">Request money from WeSaccoMobile users</string>
+    <string name="buy_airtime_desc">Top-up or send airtime across all network</string>
+    <string name="paybill_title"><![CDATA[Pay bill & buy goods]]></string>
+    <string name="paybill_desc">Manage all your bills and merchant transactions</string>
+    <string name="yow_owe_hint">Your Loan</string>
+    <string name="you_have_hint">You have</string>
+    <string name="my_balance">My balance</string>
+    <string name="set_up_fingerprint_id">Biometric setup</string>
+    <string name="enter_password_to_sign_in">Enter Password</string>
+
+
+    <!-- Time -->
+    <string name="timeago_ago">%1$s ago</string>
+    <string name="timeago_from_now">%1$s from now</string>
+    <string name="timeago_secondes">less than a minute</string>
+    <string name="timeago_minute">about a minute</string>
+    <string name="timeago_minutes">%1$d minutes</string>
+    <string name="timeago_hour">about an hour</string>
+    <string name="timeago_hours">about %1$d hours</string>
+    <string name="timeago_day">a day</string>
+    <string name="timeago_days">%1$d days</string>
+    <string name="timeago_month">about a month</string>
+    <string name="timeago_months">%1$d months</string>
+    <string name="timeago_year">about a year</string>
+    <string name="timeago_years">%1$d years</string>
+
+
+    <string name="saved_paybill" translatable="false">Saved paybill</string>
+    <string name="deleted_paybill" translatable="false">Deleted paybill</string>
+
+
+    <!--    Account Setting-->
+    <string name="check_loan_limit">Check loan limit</string>
+    <string name="view_your_loan_limit">View your loan limit</string>
+    <string name="make_purchase">Make a purchase</string>
+    <string name="view_term_and_condition">View terms and condition</string>
+    <string name="reminders">Reminders</string>
+    <string name="reminder_desc">Get notified when your schedule payments are coming up</string>
+    <string name="wesacco_account_alert">WeSacco account alerts</string>
+    <string name="wesacco_account_alert_desc">Get important updates about your sacco accounts or card</string>
+    <string name="service_update">Service updates</string>
+    <string name="service_update_desc">Get alert about any upgrades,outage or scheduled downtime</string>
+    <string name="marketing_content">Marketing content</string>
+    <string name="marketing_content_desc">We\'ll let you know about new products or promotion</string>
+    <string name="events">Events</string>
+    <string name="events_desc">Get notified about any upcoming important events</string>
+    <string name="don_t_use_a_previous_or_old_pin">Don\'t use a previous or old PIN</string>
+    <string name="payment_reason">Payment reason</string>
+    <string name="optional">Optional</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="transaction_alert">Transaction alerts</string>
+    <string name="transaction_alert_desc">Get alerts about your account transactions</string>
+    <string name="transact">Transact</string>
+    <string name="account_information">Account Information</string>
+    <string name="view_your_statement">View your statement</string>
+    <string name="send_to_a_bank_account">Send to a bank account</string>
+    <string name="send_to_phone_linked_account">Send to a phone-linked account</string>
+    <string name="search_for_bank">Search for a bank</string>
+    <string name="continue_hint">Continue</string>
+    <string name="pay_bill_hint">Pay bill</string>
+    <string name="how_can_we_help_you">How can we help you?</string>
+
+
+    <!--    Manage Devices-->
+    <string name="mobile_device">Mobile devices</string>
+    <string name="no_of_mobile_devices">% device</string>
+    <string name="web_devices">Web devices</string>
+    <string name="web_devices_no">% devices</string>
+    <string name="get_in_touch_desc">Reach out to us any time you need help and our talented team will gladly assist you</string>
+    <string name="which_device_would_you_like_to_remove">Which device would you like to remove?</string>
+    <string name="mobile_devices_desc">Choose the device you want to remove. TO connect it again, simply sign in to your profile using that device</string>
+    <string name="change_your_pin">Change your PIN</string>
+    <string name="change_your_existing_pin">Change your existing PIN</string>
+    <string name="reset_your_pin">Reset your PIN</string>
+    <string name="reset_your_pin_if_you_ve_forgotten_it">Reset your PIN if you\'ve forgotten it</string>
+    <string name="make_sure_your_pin_easy">Make sure your PIN is easy to remember</string>
+    <string name="enter_current_pin">Enter your current PIN</string>
+    <string name="enter_new_pin">Enter your new PIN</string>
+    <string name="confirm_new_password">Confirm new password</string>
+
+    <!--    Security Screen Hint-->
+    <string name="change_your_password_title">Change your password</string>
+    <string name="change_your_password_subtitle">Create a new password</string>
+    <string name="manage_your_pin_title">Manage your PIN</string>
+    <string name="manage_your_pin_subtitle">Reset or change your PIN</string>
+    <string name="manage_security_question_title">Manage security questions</string>
+    <string name="manage_security_question_subtitle">Update your security questions</string>
+    <string name="enable_touch_title">Enable Touch ID</string>
+    <string name="enable_touch_subtitle">Unlock with Touch ID</string>
+    <string name="manage_your_devices_title">Manage your devices</string>
+    <string name="manage_your_devices_subtitle">Manage the devices connected to your profile</string>
+
+    <string name="change_password_title">Change your password</string>
+    <string name="change_password_description">Create a new password</string>
+
+    <!-- Paybill -->
+    <string name="business_number_label">Business number</string>
+    <string name="save_bill">Save this bill</string>
+    <string name="save_bill_prompt">Enter business number</string>
+    <string name="bill_name_label">Nickname</string>
+    <string name="amount_checkbox_label">Always pay the same amount</string>
+    <string name="business_number_prompt">Enter business number</string>
+    <string name="btn_delete">Delete</string>
+    <string name="choose_icon_title">Choose Logo</string>
+    <string name="account_no_detail">Account no: %1$s</string>
+    <string name="paybill_delete_success">Paybill deleted successfully</string>
+    <string name="paybill_delete_header">Delete Paybill</string>
+    <string name="paybill_delete_msg">Are you sure you want to delete %1$s?</string>
+    <string name="paybill_error_business_number">Please enter a valid business number</string>
+    <string name="paybill_save_success">Paybill saved successfully</string>
+    <string name="bill_name_error">Please enter a valid name</string>
+    <string name="label_popular">Popular</string>
+    <string name="pay_now">Pay now</string>
+    <string name="paybill_update_header">Update Paybill</string>
+    <string name="paybill_update_msg">Are you sure you want to update %1$s?</string>
+    <string name="paybill_update_success">Paybill updated successfully</string>
+    <string name="btn_update">Update</string>
+
+    <string name="btn_not_now">Not Now</string>
+
+    <!--    Notifications-->
+    <string name="select_the_account_you_want_to_get_transaction_alert_for">Select the account you want to get transaction alert for</string>
+    <string name="how_do_you_want_to_receive_your_alerts">How do you want to receive your alerts?</string>
+    <string name="notification_disabled">Notifications disabled</string>
+    <string name="sms_alert">SMS alerts</string>
+    <string name="alert_enabled">Alert enabled</string>
+    <string name="enable_all_accounts">Enable all accounts</string>
+    <string name="notification_enabled">Notifications enabled</string>
+    <string name="select_the_account_you_want_to_get_reminders_alert_for">Select the accounts you want to get reminders for</string>
+    <string name="how_do_you_want_to_receive_your_notification">How do you want to receive your notifications?</string>
+    <string name="email_notification">Email</string>
+    <string name="push_notification">Push notification</string>
+    <string name="account_user">Stephen Chacha Marwa</string>
+    <string name="account_number">123456789</string>
+    <string name="buy_for_someone_new">Buy for someone new</string>
+    <string name="search_for_country">Search for a country</string>
+    <string name="get_in_touch_subtitle">Email,call or find us on social media</string>
+    <string name="make_payment">Make Payment</string>
+    <string name="send_to_someone_new">Send to someone new</string>
+    <string name="enter_an_account_number">Enter an account number</string>
+    <string name="withdraw_from_paypal">Withdraw from PayPal</string>
+    <string name="withdraw_cash">Withdraw cash</string>
+    <string name="western_union_send_money_subtitle">Send money internationally through Western Union</string>
+    <string name="receive_money">Receive Money</string>
+    <string name="western_union_receive_money_subtitle">Receive money by entering a Western Union tracking number</string>
+    <string name="recommed">Recommend</string>
+    <string name="activate_chat_banking">Activate Chat Banking</string>
+    <string name="activate_chat_banking_desc">Transact with Equity\'s Virtual Assistant</string>
+    <string name="add_an_equity_account">Add an Equity account</string>
+    <string name="add_an_equity_account_des">An an Equity account to your profile</string>
+    <string name="add_your_paypal_account_desc">Link any two PayPal accounts to your bank accounts</string>
+    <string name="notification_preferences">Notification Preferences</string>
+    <string name="notification">Notification</string>
+    <string name="root_url">http</string>
+
+
+    <!-- Transfer -->
+    <string name="loading_link_dialoghead">Loading, one moment</string>
+    <string name="pay_with_label">Pay with</string>
+    <string name="paid_with_label">Paid with</string>
+    <string name="transfer_amount_label">Amount</string>
+    <string name="account_label">Account number</string>
+    <string name="merchant_label">Till number</string>
+    <string name="paybill_name_label">Name</string>
+    <string name="actions_fielderror">This account does not support buy airtime. Please select a different account.</string>
+    <string name="recipientphone_label">Contact phone number</string>
+    <string name="recipientacct_label">Recipient account number</string>
+    <string name="toast_error_contactperm">You must grant the read contacts permission to choose a number from your address book.</string>
+    <string name="toast_error_contactselect">There was a problem selecting your contact. Please try again.</string>
+    <string name="transfer_error_recipient_general">Please enter a recipient number.</string>
+    <string name="transfer_error_recipient_phone">Please enter a phone number.</string>
+    <string name="transfer_error_recipient_account">Please enter an account number.</string>
+    <string name="amount_fielderror">Please enter a valid amount.</string>
+    <string name="channel_fielderror">Please select a service.</string>
+    <string name="action_fielderror">Please select a recipient network.</string>
+    <string name="channel_request_fieldinfo">Please check that your choice can send to %1$s</string>
+    <string name="no_actions_fielderror">This service cannot be used for %1$s.</string>
+    <string name="toast_pleasefix">Please fix the errors shown in red.</string>
+    <string name="self_choice">Myself</string>
+    <string name="other_choice">Someone else</string>
+    <string name="onnet_choice">on network</string>
+    <string name="offnet_choice">To %1$s</string>
+    <string name="note_cardhead">Description</string>
+    <string name="request_note_label">What is your request for?</string>
+    <string name="recipient_label">To</string>
+    <string name="business_label">Business</string>
+    <string name="verify_recipient_label">Check recipient name</string>
+    <string name="transfer_fee_label">Fee</string>
+    <string name="transfer_fee_label_who">%1$s Fee</string>
+    <string name="sender_label">From</string>
+    <string name="send_who_header">Send money to</string>
+    <string name="airtime_who_header">Buy airtime for</string>
+    <string name="accounts_label">Pay from</string>
+    <string name="self_only_money_warning">This can only be used to move money to your own account.</string>
+    <string name="self_only_airtime_warning">This can only be used to buy airtime for your own account.</string>
+
+    <string name="fab_transfernow">Send money now</string>
+    <string name="fab_airtimenow">Buy airtime now</string>
+    <string name="noworry_explain">You can review this info in the next step.</string>
+    <string name="descrip_multcontacts">%1$d contacts</string>
+
+    <string name="descrip_balance">%1$s balance</string>
+    <string name="descrip_airtime_sent">Sent %1$s airtime to %2$s</string>
+    <string name="descrip_transfer_sent">Send %1$s to %2$s</string>
+    <string name="descrip_transfer_received">received money from %1$s</string>
+    <string name="descrip_fetch_accounts">fetched accounts from %1$s</string>
+    <string name="descrip_bill_paid">Paid %1$s to account %2$s at %3$s</string>
+    <string name="descrip_merchant_paid">Paid %1$s to %2$s</string>
+    <string name="descrip_recorded">Recorded USSD session on %1$s</string>
+    <string name="descrip_airtime_sched">Buy airtime with %1$s for %2$s</string>
+
+    <string name="descrip_long_airtime_send">buy %1$s airtime with %2$s for %3$s</string>
+    <string name="descrip_long_transfer_send">send %1$s from %2$s to %3$s on %4$s</string>
+    <string name="descrip_long_move">move %1$s from %2$s to %3$s</string>
+    <string name="descrip_long_bill_paid">pay %1$s from %2$s to %3$s</string>
+
+    <string name="enterValue_non_template_error">Please enter a valid %1$s</string>
+    <string name="enable_call_permission">enable call permission\n</string>
+    <string name="enter_your_address">Eg.Nairobi</string>
+    <string name="welcome_greetings">Hello there,</string>
+    <string name="login_description_header">Sign in to continue. Remember,your password is yours,do not share with anyone</string>
+
+
+    <string name="simpage_permission_alert">Grant WeSacco permission to show your services available in your location and transaction history</string>
+    <string name="link_sim_to_stax">Link your SIM cards to Wesacco</string>
+    <string name="link_nth_sim_to_stax">Link your %1$s SIM card</string>
+    <string name="your_sim_cards">Your SIM cards</string>
+</resources>
