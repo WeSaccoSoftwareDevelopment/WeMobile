@@ -12,7 +12,7 @@ struct ComposeView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }
 
-struct ContentView: View {
+struct ComposeContentView: View {
     var body: some View {
         ComposeView()
                 .ignoresSafeArea(.keyboard)

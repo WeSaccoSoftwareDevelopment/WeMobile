@@ -59,7 +59,6 @@ fun HeadFirstCard(
 
 }
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 private fun CardHeader(
     textHeader: String? = null,
