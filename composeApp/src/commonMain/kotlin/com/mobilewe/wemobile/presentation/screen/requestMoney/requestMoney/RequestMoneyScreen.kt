@@ -50,13 +50,7 @@ fun RequestMoneyScreen(
             )
         },
         bottomBar = {
-            ContinueButton(
-                text = "stringResource(id = R.string.continuee)",
-                onClick = {
-                    requestMoneyViewModel.setShowDialogState(true)
-                },
-                enable = uiState.phoneNumber.isNotBlank() && uiState.amount.isNotBlank()
-            )
+
         }
     ) {
         if (shouldShowDialog) {
@@ -113,6 +107,14 @@ fun RequestMoneyScreen(
             keyboardType = KeyboardType.Number,
             hint = "stringResource(id = R.string.amount)",
             supportText = "stringResource(id = R.string.amount_support_text)"
+        )
+
+        ContinueButton(
+            text = "stringResource(id = R.string.continuee)",
+            onClick = {
+                requestMoneyViewModel.setShowDialogState(true)
+            },
+            enable = uiState.phoneNumber.isNotBlank() && uiState.amount.isNotBlank()
         )
 
 

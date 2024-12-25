@@ -45,15 +45,9 @@ fun WithdrawContent(
     MainBackgroundHeader(
         topBar = {
             AppToolbar(
-                title = "View your statement",
+                title = "Withdraw",
                 showBackArrow = true,
                 navigateBack = { navigateBack() }
-            )
-        },
-        bottomBar = {
-            ContinueButton(
-                onClick = { },
-                text = "Withdraw"
             )
         }
     ) {
@@ -71,6 +65,11 @@ fun WithdrawContent(
             onValueChange = viewModel::onAmountChanged,
             hint = Resources.strings.amount,
             keyboardType = KeyboardType.Number,
+        )
+
+        ContinueButton(
+            onClick = { },
+            text = "Withdraw"
         )
 
         WeSaccoModalSheet(

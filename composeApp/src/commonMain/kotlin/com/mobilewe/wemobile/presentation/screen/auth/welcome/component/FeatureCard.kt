@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.mobilewe.wemobile.presentation.common.theme.WeThemes
+import com.mobilewe.wemobile.resources.Resources
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import wemobile.composeapp.generated.resources.Res
@@ -74,18 +75,18 @@ data class Feature(val title: String, val desc: String, val iconRes: DrawableRes
 @Composable
 fun getFeatures(): List<Feature> = listOf(
     Feature(
-        title = "stringResource(R.string.intro_feature_one_title)",
-        desc = "stringResource(R.string.intro_feature_one_desc)",
+        title =Resources.strings.introFeatureOneTitle,
+        desc = Resources.strings.introFeatureOneDesc,
         iconRes = Res.drawable.insights_icon
     ),
     Feature(
-        title = "stringResource(R.string.intro_feature_two_title)",
-        desc = "stringResource(R.string.intro_feature_two_desc)",
+        title =Resources.strings.introFeatureTwoTitle,
+        desc = Resources.strings.introFeatureTwoDesc,
         iconRes = Res.drawable.insights_icon
     ),
     Feature(
-        title = "stringResource(R.string.intro_feature_three_title)",
-        desc = "stringResource(R.string.intro_feature_three_desc)",
-        iconRes = Res.drawable.icon_arrow_back
-    )
+        title =Resources.strings.introFeatureThreeTitle,
+        desc = Resources.strings.introFeatureThreeDesc,
+        iconRes = Res.drawable.insights_icon
+    ),
 )

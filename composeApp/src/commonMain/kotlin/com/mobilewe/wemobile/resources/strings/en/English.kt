@@ -3,7 +3,7 @@ package com.mobilewe.wemobile.resources.strings.en
 import com.mobilewe.wemobile.resources.strings.IStringResources
 
 data class English(
-    override val beepBeep: String = "WesaccoMobile",
+    override val weSacco: String = "WesaccoMobile",
     override val backgroundDescription: String = "background image",
     override val loginWelcomeMessage: String = "Welcome To Beep Beep App",
     override val loginSubWelcomeMessage: String = "Login to access all the features",

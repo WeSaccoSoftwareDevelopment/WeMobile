@@ -48,6 +48,7 @@ fun StandardScaffold(
         currentDestination?.hierarchy?.any { it.hasRoute(route) } == true
     }
 
+
     Scaffold(
         bottomBar = {
             if (showBottomBar) {

@@ -16,6 +16,10 @@ import androidx.compose.ui.unit.dp
 import com.mobilewe.wemobile.presentation.common.composables.textfield.RideOutlinedTextField
 import com.mobilewe.wemobile.resources.Resources
 import dev.icerock.moko.permissions.PermissionState
+import org.jetbrains.compose.resources.stringResource
+import wemobile.composeapp.generated.resources.Res
+import wemobile.composeapp.generated.resources.amount
+import wemobile.composeapp.generated.resources.amount_support_text
 
 @Composable
 fun PhoneNumberField(
@@ -59,7 +63,7 @@ fun AmountField(
         onValueChange = onAmountChange,
         maxLength = 5,
         keyboardType = KeyboardType.Number,
-        hint = "stringResource(id = R.string.amount)",
-        supportText = "stringResource(id = R.string.amount_support_text)"
+        hint = stringResource(Res.string.amount),
+        supportText = stringResource(Res.string.amount_support_text)
     )
 }

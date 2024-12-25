@@ -63,6 +63,10 @@ struct BillTillPayView: View {
                         .padding()
                         .background(Color.black.opacity(0.1))
                         .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
                         .keyboardType(.numberPad)
                     
                     TextField("Account Number", text: $accountNumber)
@@ -70,6 +74,10 @@ struct BillTillPayView: View {
                         .background(Color.black.opacity(0.1))
                         .cornerRadius(10)
                         .keyboardType(.numberPad)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
                         .overlay(
                             HStack {
                                 Spacer()
@@ -83,6 +91,10 @@ struct BillTillPayView: View {
                         .padding()
                         .background(Color.black.opacity(0.1))
                         .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
                         .keyboardType(.decimalPad)
                 }
                 .foregroundColor(.white)

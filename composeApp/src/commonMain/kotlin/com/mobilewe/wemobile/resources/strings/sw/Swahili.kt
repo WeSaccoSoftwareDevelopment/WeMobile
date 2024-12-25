@@ -4,7 +4,7 @@ import com.mobilewe.wemobile.resources.strings.IStringResources
 
 
 data class Swahili(
-    override val beepBeep: String = "WesaccoMobile",
+    override val weSacco: String = "WesaccoMobile",
     override val backgroundDescription: String = "background image",
     override val loginWelcomeMessage: String = "Karibu kwenye programu ya Beep Beep",
     override val loginSubWelcomeMessage: String = "Ingia ili kupata huduma zote",

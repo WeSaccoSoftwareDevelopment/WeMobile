@@ -38,55 +38,55 @@ import wemobile.composeapp.generated.resources.Res
 import wemobile.composeapp.generated.resources.outline_account_circle
 import wemobile.composeapp.generated.resources.sacco_logo
 
-@OptIn(ExperimentalMaterial3Api::class)
-//@Composable
-//fun AppToolbar(
-//    title: String,
-//    modifier: Modifier = Modifier,
-//    colors: TopAppBarColors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-//        containerColor = MaterialTheme.colorScheme.tertiaryContainer
-//    ),
-//    scrollBehavior: TopAppBarScrollBehavior? = null,
-//    showBackArrow: Boolean = false,
-//    showForwardArrow: Boolean = false,
-//    navigateBack:()-> Unit = {}
-//){
-//    CenterAlignedTopAppBar(
-//        title = {
-//            Text(
-//                text = title,
-//                maxLines = 1,
-//                overflow = TextOverflow.Ellipsis,
-//                style = WeThemes.typography.labelLarge,
-//                color = Color.White,
-//                fontWeight = FontWeight.SemiBold
-//            )
-//        }, navigationIcon = {
-//            if (showBackArrow) {
-//                IconButton(onClick = { navigateBack() }) {
-//                    Image(
-//                        imageVector = Icons.Default.ArrowBack,
-//                        contentDescription = "Localized description",
-//                        colorFilter = ColorFilter.tint(Color.White)
-//                    )
-//                }
-//            }
-//        }, actions = {
-//            if (showForwardArrow) {
-//                IconButton(onClick = { navigateBack()}) {
-//                    Icon(
-//                        imageVector = Icons.Filled.Close,
-//                        contentDescription = "Localized description",
-//                        tint = Color.White
-//                    )
-//                }
-//            }
-//        },
-//        colors = colors,
-//        scrollBehavior = scrollBehavior,
-//        modifier = modifier
-//    )
-//}
+/*@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun AppToolbar(
+    title: String,
+    modifier: Modifier = Modifier,
+    colors: TopAppBarColors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+        containerColor = MaterialTheme.colorScheme.tertiaryContainer
+    ),
+    scrollBehavior: TopAppBarScrollBehavior? = null,
+    showBackArrow: Boolean = false,
+    showForwardArrow: Boolean = false,
+    navigateBack:()-> Unit = {}
+){
+    CenterAlignedTopAppBar(
+        title = {
+            Text(
+                text = title,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                style = WeThemes.typography.labelLarge,
+                color = Color.White,
+                fontWeight = FontWeight.SemiBold
+            )
+        }, navigationIcon = {
+            if (showBackArrow) {
+                IconButton(onClick = { navigateBack() }) {
+                    Image(
+                        imageVector = Icons.Default.ArrowBack,
+                        contentDescription = "Localized description",
+                        colorFilter = ColorFilter.tint(Color.White)
+                    )
+                }
+            }
+        }, actions = {
+            if (showForwardArrow) {
+                IconButton(onClick = { navigateBack()}) {
+                    Icon(
+                        imageVector = Icons.Filled.Close,
+                        contentDescription = "Localized description",
+                        tint = Color.White
+                    )
+                }
+            }
+        },
+        colors = colors,
+        scrollBehavior = scrollBehavior,
+        modifier = modifier
+    )
+}*/
 
 @Composable
 fun AppToolbar(
@@ -107,7 +107,7 @@ fun AppToolbar(
                 Image(
                     imageVector = Icons.Default.ArrowBack,
                     contentDescription = "Localized description",
-                    colorFilter = ColorFilter.tint(Color.White)
+                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onBackground)
                 )
             }
         }
@@ -116,7 +116,7 @@ fun AppToolbar(
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             style = WeThemes.typography.labelLarge,
-            color = Color.White,
+            color = MaterialTheme.colorScheme.onBackground,
             fontWeight = FontWeight.SemiBold
         )
         Spacer(modifier = Modifier.width(10.dp))
@@ -126,7 +126,7 @@ fun AppToolbar(
                 Icon(
                     imageVector = Icons.Filled.Close,
                     contentDescription = "Localized description",
-                    tint = Color.White
+                    tint = MaterialTheme.colorScheme.onBackground
                 )
             }
         }

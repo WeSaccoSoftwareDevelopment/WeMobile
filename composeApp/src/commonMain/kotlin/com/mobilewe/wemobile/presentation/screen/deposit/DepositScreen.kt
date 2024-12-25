@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.mobilewe.wemobile.presentation.common.composables.MainBackgroundHeader
+import com.mobilewe.wemobile.presentation.common.composables.appbar.AppToolbar
 import com.mobilewe.wemobile.presentation.common.composables.button.ContinueButton
 import com.mobilewe.wemobile.presentation.common.composables.modalSheet.WeSaccoModalSheet
 import com.mobilewe.wemobile.presentation.common.composables.textfield.AccountTypeTextField
@@ -41,7 +42,14 @@ fun DepositScreenContent(
     var currentBottomSheet: DepositBottomSheetType? by remember { mutableStateOf(null) }
     val sheetState = rememberModalBottomSheetState()
 
-    MainBackgroundHeader {
+    MainBackgroundHeader(
+        topBar = {
+            AppToolbar(
+                title = "Deposit",
+                navigateBack = navigateBack
+            )
+        }
+    ) {
         AccountTypeTextField(
             accountTypeName = depositState.depositAccount,
             onAccountTypeChanged = depositScreenViewModel::onAccountTypeChanged,

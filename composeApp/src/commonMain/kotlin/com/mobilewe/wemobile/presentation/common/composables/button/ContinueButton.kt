@@ -36,9 +36,9 @@ fun ContinueButton(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(
-                    start = 16.dp,
-                    end = 16.dp,
-                    top = 18.dp,
+                    start = 12.dp,
+                    end = 12.dp,
+                    top = 16.dp,
                     bottom = 12.dp
                 )
         ){

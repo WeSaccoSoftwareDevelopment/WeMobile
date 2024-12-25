@@ -5,7 +5,10 @@ import ComposeApp
 struct iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ComposeContentView()
+            ZStack {
+                ComposeContentView().edgesIgnoringSafeArea([.top])
+            }
         }
     }
 }
+

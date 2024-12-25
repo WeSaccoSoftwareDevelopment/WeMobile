@@ -16,6 +16,7 @@ import com.mobilewe.wemobile.presentation.screen.auth.welcome.component.FeatureC
 import com.mobilewe.wemobile.presentation.screen.auth.welcome.component.WelcomeHeader
 import com.mobilewe.wemobile.presentation.screen.auth.welcome.component.getFeatures
 import com.mobilewe.wemobile.resources.Resources
+import org.jetbrains.compose.resources.stringResource
 
 
 @Composable
@@ -34,8 +35,8 @@ fun WelcomeScreen(
             ) {
 
                 WelcomeHeader(
-                    title = "stringResource(R.string.welcome_title_one)",
-                    desc = "stringResource(R.string.welcome_sub_one)"
+                    title = Resources.strings.welcomeTitleOne,
+                    desc = Resources.strings.welcomeSubOne
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))

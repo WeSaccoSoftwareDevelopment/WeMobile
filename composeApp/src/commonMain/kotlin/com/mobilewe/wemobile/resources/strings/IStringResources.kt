@@ -11,7 +11,7 @@ interface IStringResources {
     val invalidEmail: String
     val invalidFullName: String
     val oppsRegistrationNotCompleted: String
-    val beepBeep: String
+    val weSacco: String
     val backgroundDescription: String
     val loginWelcomeMessage: String
     val loginSubWelcomeMessage: String
