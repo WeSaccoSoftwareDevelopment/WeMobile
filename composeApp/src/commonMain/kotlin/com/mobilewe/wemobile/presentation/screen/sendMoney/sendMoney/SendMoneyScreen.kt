@@ -61,13 +61,7 @@ fun SendMoneyMainScreen(
             )
         },
         bottomBar = {
-            ContinueButton(
-                text = Resources.strings.continuee,
-                onClick = {
-                    sendMoneyViewModel.setShowDialogState(true)
-                },
-                enable = sendMoneyState.phoneNumber.isNotBlank() && sendMoneyState.amount.isNotBlank()
-            )
+
         }
     ) {
         if (shouldShowDialog) {
@@ -124,6 +118,14 @@ fun SendMoneyMainScreen(
             keyboardType = KeyboardType.Number,
             hint = Resources.strings.amount,
             supportText = "Minimum 1"
+        )
+
+        ContinueButton(
+            text = Resources.strings.continuee,
+            onClick = {
+                sendMoneyViewModel.setShowDialogState(true)
+            },
+            enable = sendMoneyState.phoneNumber.isNotBlank() && sendMoneyState.amount.isNotBlank()
         )
 
 

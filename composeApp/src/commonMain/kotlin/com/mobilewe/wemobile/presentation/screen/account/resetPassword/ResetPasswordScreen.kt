@@ -20,6 +20,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.mobilewe.wemobile.presentation.common.composables.appbar.AppToolbar
 import com.mobilewe.wemobile.presentation.common.composables.button.ContinueButton
 import com.mobilewe.wemobile.presentation.common.composables.textfield.AppOutlinedTextField
+import org.jetbrains.compose.resources.stringResource
+import wemobile.composeapp.generated.resources.Res
+import wemobile.composeapp.generated.resources.continuee
 
 @Composable
 fun ResetPasswordScreen(
@@ -49,13 +52,6 @@ fun ResetPasswordContent(
                 showForwardArrow = true,
                 showBackArrow = true,
                 navigateBack = {navigateBack()}
-            )
-        },
-        bottomBar = {
-            ContinueButton(
-                text = "stringResource(id = R.string.continuee)",
-                onClick = onClickAction,
-                enable = currentPassword.isNotEmpty() && newPassword.isNotEmpty() && confirmNewPassword.isNotEmpty() && newPassword == confirmNewPassword
             )
         }
     ) { paddingValues ->
@@ -105,7 +101,11 @@ fun ResetPasswordContent(
                 }
             )
             Spacer(modifier = Modifier.height(12.dp))
-
+            ContinueButton(
+                text = stringResource(Res.string.continuee),
+                onClick = onClickAction,
+                enable = currentPassword.isNotEmpty() && newPassword.isNotEmpty() && confirmNewPassword.isNotEmpty() && newPassword == confirmNewPassword
+            )
 
 
         }

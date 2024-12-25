@@ -28,6 +28,7 @@ fun MarketScreen(
     navigateBack: () -> Unit = {}
 ) {
     val cardsItems = getCardImages()
+    val marketTypeOptions = marketTypeOption()
     HomeScreenHeader(
         topBar = {
             AppToolbar(
@@ -45,12 +46,12 @@ fun MarketScreen(
             item(span = { GridItemSpan(this.maxCurrentLineSpan) }) {
                 Spacer(modifier = Modifier.height(16.dp))
             }
-            items(marketTypeOption.size) { index ->
+            items(marketTypeOptions.size) { index ->
                 MarketTypeCard(
-                    title = marketTypeOption[index].title,
-                    subTitle = marketTypeOption[index].subTitle,
-                    imageResourceId = marketTypeOption[index].imageResourceId,
-                    containerColor = marketTypeOption[index].containerColor,
+                    title = marketTypeOption()[index].title,
+                    subTitle = marketTypeOption()[index].subTitle,
+                    imageResourceId = marketTypeOption()[index].imageResourceId,
+                    containerColor = marketTypeOption()[index].containerColor,
                     onClick = { marketTypeOption ->
                         when (marketTypeOption) {
 //                                 R.string.privacy ->{}

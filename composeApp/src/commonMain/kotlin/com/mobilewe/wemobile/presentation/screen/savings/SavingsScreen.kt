@@ -30,9 +30,11 @@ import wemobile.composeapp.generated.resources.call_savings_title
 
 
 @Composable
-fun SavingMainScreen() {
+fun SavingMainScreen(
+    navigateBack: () -> Unit
+) {
     SavingsScreen(
-        navigateBack = { /*TODO*/ },
+        navigateBack = navigateBack,
         navController =  rememberNavController()
     )
 
@@ -43,7 +45,6 @@ fun SavingsScreen(
     navigateBack: () -> Unit,
     navController: NavController
 ) {
-
     Scaffold(
         topBar = {
             TopAppBar(

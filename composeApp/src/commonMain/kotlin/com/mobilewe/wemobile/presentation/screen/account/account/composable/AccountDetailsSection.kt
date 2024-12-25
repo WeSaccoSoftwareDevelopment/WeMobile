@@ -41,7 +41,6 @@ fun AccountDetailsSection(
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
         ) {
             Image(
                 painter = painterResource(user.picture),

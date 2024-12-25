@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.mobilewe.wemobile.presentation.common.theme.WeThemes
+import com.mobilewe.wemobile.resources.Resources
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import wemobile.composeapp.generated.resources.Res
@@ -100,22 +101,23 @@ data class MarketType(
     val containerColor: Color,
 )
 
- val marketTypeOption = listOf(
+@Composable
+ fun marketTypeOption() : List<MarketType> = listOf(
     MarketType(
-        title = "R.string.buy_airtime_home_title",
-        subTitle = "R.string.buy_airtime_desc",
+        title = Resources.strings.buyGoodsTitle,
+        subTitle = Resources.strings.buyGoodsTitle,
         imageResourceId = Res.drawable.icon_deposit,
         containerColor = Color(0, 48, 72)
     ),
     MarketType(
-        title = "R.string.buy_airtime_home_title",
-        subTitle = "R.string.buy_airtime_desc",
+        title = Resources.strings.buyGoodsTitle,
+        subTitle = Resources.strings.buyGoodsTitle,
         imageResourceId = Res.drawable.icon_deposit,
         containerColor = Color(71, 126, 149)
     ),
     MarketType(
-        title = "R.string.buy_airtime_home_title",
-        subTitle = "R.string.buy_airtime_desc",
+        title = Resources.strings.buyGoodsTitle,
+        subTitle = Resources.strings.buyGoodsTitle,
         imageResourceId = Res.drawable.icon_deposit,
         containerColor = Color(141, 103, 171)
     )

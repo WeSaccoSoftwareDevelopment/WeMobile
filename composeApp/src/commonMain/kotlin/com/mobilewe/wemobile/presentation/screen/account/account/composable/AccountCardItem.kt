@@ -33,7 +33,7 @@ import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun AccountCardItem(
-   text: String,
+    text: String,
     subTitle: String?,
     icon: DrawableResource,
     onClick: (String) -> Unit,
@@ -80,7 +80,7 @@ fun AccountCardItem(
             Spacer(modifier = Modifier.height(8.dp))
             if (subTitle !=null){
                 Text(
-                    text = "stringResource(id = subTitle)",
+                    text = subTitle,
                     fontSize = 11.sp,
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Start,

@@ -15,19 +15,12 @@ enum class BottomNavigation(
     val contentDescription: String?,
     val route: RootGraph
 ) {
-    HOME("Home", Res.drawable.home,"Home", RootGraph.HomeGraph),
-    TRANSACT("Transact", Res.drawable.sync_alt_icon,"Transact", RootGraph.TransactGraph),
+    HOME("Home", Res.drawable.home,"Home", RootGraph.Home),
+    TRANSACT("Transact", Res.drawable.sync_alt_icon,"Transact", RootGraph.TransactMain),
     LOAN("LOAN",null,"",RootGraph.DiscoverGraph),
-    DISCOVER("Discover", Res.drawable.market_icons,"Discover", RootGraph.DiscoverGraph),
-    ACCOUNT("Account", Res.drawable.account_circle, "Account", RootGraph.AccountGraph),
+    DISCOVER("Discover", Res.drawable.market_icons,"Discover", RootGraph.DiscoverMain),
+    ACCOUNT("Account", Res.drawable.account_circle, "Account", RootGraph.AccountMain),
 
 }
 
-data class BottomNavItem(
-    val screen: Any,
-    val icon: DrawableResource? = null,
-    val title: String? = null,
-    val contentDescription: String? = null,
-    val alertCount: Int? = null,
-)
 

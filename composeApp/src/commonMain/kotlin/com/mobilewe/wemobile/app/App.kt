@@ -1,14 +1,10 @@
 package com.mobilewe.wemobile.app
 
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeGesturesPadding
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.mobilewe.wemobile.presentation.common.bottomNav.StandardScaffold
 import com.mobilewe.wemobile.presentation.common.navigation.NavigationGraph

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		4002F2C52CFB6392001E5889 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4002F2C42CFB6382001E5889 /* MainScreen.swift */; };
-		7555FF83242A565900829871 /* ComposeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ComposeContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +19,15 @@
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		4002F2C42CFB6382001E5889 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* WeMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7555FF82242A565900829871 /* ComposeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		406A11C92CFF657D00D1E9A9 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+		406A11CA2CFF659300D1E9A9 /* Root */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Root; sourceTree = "<group>"; };
+		406A11CD2CFF673E00D1E9A9 /* Scenes */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Scenes; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B92378962B6B1156000C7307 /* Frameworks */ = {
@@ -47,6 +51,7 @@
 		4002F2C12CFB632C001E5889 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				4002F2C42CFB6382001E5889 /* MainScreen.swift */,
 			);
 			path = App;
@@ -82,10 +87,11 @@
 			children = (
 				4002F2C12CFB632C001E5889 /* App */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
-				7555FF82242A565900829871 /* ComposeContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
-				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
+				406A11C92CFF657D00D1E9A9 /* Resources */,
+				406A11CA2CFF659300D1E9A9 /* Root */,
+				406A11CD2CFF673E00D1E9A9 /* Scenes */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -114,6 +120,11 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				406A11C92CFF657D00D1E9A9 /* Resources */,
+				406A11CA2CFF659300D1E9A9 /* Root */,
+				406A11CD2CFF673E00D1E9A9 /* Scenes */,
+			);
 			name = iosApp;
 			packageProductDependencies = (
 			);
@@ -129,7 +140,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = orgName;
 				TargetAttributes = {
 					7555FF7A242A565900829871 = {
@@ -197,7 +208,6 @@
 			files = (
 				4002F2C52CFB6392001E5889 /* MainScreen.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				7555FF83242A565900829871 /* ComposeContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

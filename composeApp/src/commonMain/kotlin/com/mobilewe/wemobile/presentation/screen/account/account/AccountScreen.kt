@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,6 +21,9 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.mobilewe.wemobile.presentation.screen.auth.welcome.component.Feature
+import com.mobilewe.wemobile.presentation.screen.auth.welcome.component.getFeatures
+import com.mobilewe.wemobile.resources.Resources
 import org.jetbrains.compose.resources.DrawableResource
 import org.koin.compose.viewmodel.koinViewModel
 import wemobile.composeapp.generated.resources.Res
@@ -37,7 +41,8 @@ fun AccountScreen(
     navigateToManagePin:()->Unit,
     navigateToManagePassword:()->Unit
 ) {
-
+    val features = accountOptions()
+    val features2 = accountOptions2()
     val viewModel: AccountViewModel = koinViewModel()
     var isSheetOpen by rememberSaveable { mutableStateOf(false) }
     var isLogoutSheetOpen by rememberSaveable { mutableStateOf(false) }
@@ -56,65 +61,78 @@ fun AccountScreen(
                 .fillMaxWidth()
                 .padding(paddingValues)
         ) {
-            LazyVerticalGrid(
-                columns = GridCells.Fixed(2),
-                verticalArrangement = Arrangement.spacedBy(12.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
-            ) {
+            Column {
 
-                item(span = { GridItemSpan(2) }) {
-                    Column {
-                        AccountDetailsSection(
-                            onQrCodeClick = {
-                                isSheetOpen = true
-                            },
-                            modifier = Modifier.fillMaxWidth(),
-                            onClick = {}
-                        )
+                LazyVerticalGrid(
+                    columns = GridCells.Fixed(2),
+                    verticalArrangement = Arrangement.spacedBy(12.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+                ) {
+
+                    item(span = { GridItemSpan(2) }) {
+                        Column {
+                            AccountDetailsSection(
+                                onQrCodeClick = {
+                                    isSheetOpen = true
+                                },
+                                modifier = Modifier.fillMaxWidth(),
+                                onClick = {}
+                            )
+                        }
                     }
+
+
+
+                    items(features.size) { product ->
+                        AccountCardItem(
+                            text = accountOptions()[product].title,
+                            subTitle = accountOptions()[product].subTitle,
+                            icon = accountOptions()[product].icon,
+                            onClick = { sendMoneyOption ->
+                                when (sendMoneyOption) {
+                                    "R.string.about_sacco_title"-> {
+                                        navigateToNotification()
+                                    }
+
+                                    "R.string.about_sacco_title " -> {
+                                        navigateToAboutSaccoRide()
+                                    }
+
+                                    " R.string.privacy" -> {}
+                                    " R.string.get_in_touch" -> {}
+                                }
+                            },
+                            showDrawableColorTint = false
+                        )
+
+
+                    }
+
+                    item(span = { GridItemSpan(2) }) {
+                        Text(text = "Account")
+                    }
+
+                    items(features2.size) { product ->
+                        AccountCardItem(
+                            text = accountOptions2()[product].title,
+                            subTitle = accountOptions2()[product].subTitle,
+                            icon = accountOptions2()[product].icon,
+                            onClick = { sendMoneyOption ->
+                                when (sendMoneyOption) {
+                                    "Payment Methods" -> {}
+                                    "R.string.notification_preferences " -> {}
+                                    "R.string.account_setting" -> {
+                                        navigateToSettings()
+                                    }
+                                }
+                            },
+                            showDrawableColorTint = false
+                        )
+
+                    }
+
                 }
-
-                items(accountOptions2.size) { product ->
-                    AccountCardItem(
-                        text = accountOptions2[product].title,
-                        subTitle = accountOptions2[product].subTitle,
-                        icon = accountOptions2[product].icon,
-                        onClick = { sendMoneyOption ->
-                            when (sendMoneyOption) {
-                                "R.string.notification_updates" -> { navigateToNotification()}
-                                "R.string.about_sacco_title "->{ navigateToAboutSaccoRide()}
-                               " R.string.privacy" ->{ }
-                               " R.string.get_in_touch" ->{ }
-                            }
-                        },
-                        showDrawableColorTint = false
-                    )
-
-
-                }
-
-                item(span = { GridItemSpan(2) }) {
-                    Text(text = "Account")
-                }
-
-                items(accountOptions.size) { product ->
-                    AccountCardItem(
-                        text = accountOptions[product].title,
-                        subTitle = accountOptions[product].subTitle,
-                        icon = accountOptions[product].icon,
-                        onClick = { sendMoneyOption ->
-                            when (sendMoneyOption) {
-                                "R.string.payment_methods" ->{ }
-                                "R.string.notification_preferences "-> { }
-                                "R.string.account_setting" ->{ navigateToSettings() }
-                            }
-                        },
-                        showDrawableColorTint = false
-                    )
-
-                }
-
             }
 
         }
@@ -127,44 +145,46 @@ data class AccountItem(
     val icon: DrawableResource,
 )
 
-private val accountOptions = listOf(
+@Composable
+fun accountOptions2(): List<AccountItem> = listOf(
     AccountItem(
-        title =  "R.string.payment_methods",
+        title =  Resources.strings.schedulePayment,
         icon = Res.drawable.insights_icon,
-        subTitle = "R.string.manage_options"
+        subTitle = Resources.strings.managePin
     ),
     AccountItem(
-        title = "R.string.notification_preferences",
+        title = Resources.strings.notification,
         icon = Res.drawable.notifications,
         subTitle = "R.string.manage_your_notification"
     ),
     AccountItem(
-        title = "R.string.account_setting",
+        title = "Account Settings",
         icon = Res.drawable.sim_card,
-        subTitle = "R.string.account_settings_subtitle"
+        subTitle = "Change your sign details"
     ),
 )
 
-
-private val accountOptions2 = listOf(
+@Composable
+fun accountOptions(): List<AccountItem> = listOf(
     AccountItem(
-        title =  "R.string.get_in_touch",
+        title =  Resources.strings.introFeatureTwoTitle,
         icon = Res.drawable.insights_icon,
-        subTitle = "R.string.get_in_touch_subtile"
+        subTitle = "Email,call or find us on social media"
     ),
     AccountItem(
-        title = "R.string.notification_updates",
+        title = Resources.strings.notification,
         icon = Res.drawable.notifications,
-        subTitle = "R.string.manage_your_notification"
+        subTitle = Resources.strings.notification
     ),
     AccountItem(
-        title = "R.string.about_sacco_title",
+        title = Resources.strings.aboutSaccoRide,
         icon = Res.drawable.sim_card,
-        subTitle = "R.string.terms_and_conditions"
+        subTitle = Resources.strings.termsAndConditions
     ),
     AccountItem(
-        title = "R.string.privacy",
+        title = Resources.strings.privacyPolicy,
         icon = Res.drawable.sim_card,
-        subTitle = "R.string.privacy_subtitle"
+        subTitle = Resources.strings.promptInfoSubtitle
     )
 )
+

@@ -106,7 +106,6 @@ fun HomeScreen(
 
         }
 
-
         val (isOpen, items) = when (modalState) {
             ModalSheetState.SendMoney -> true to paymentOption
             ModalSheetState.PayMerchant -> true to payBillMerchants

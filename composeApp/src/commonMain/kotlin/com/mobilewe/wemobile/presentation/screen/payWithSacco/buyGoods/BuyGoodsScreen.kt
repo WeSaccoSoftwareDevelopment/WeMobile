@@ -28,6 +28,7 @@ import com.mobilewe.wemobile.presentation.common.composables.button.ContinueButt
 import com.mobilewe.wemobile.presentation.common.composables.modalSheet.WeSaccoModalSheet
 import com.mobilewe.wemobile.presentation.common.composables.textfield.AccountTypeTextField
 import com.mobilewe.wemobile.presentation.common.composables.textfield.RideOutlinedTextField
+import com.mobilewe.wemobile.presentation.common.navigation.TransactDes
 import org.koin.compose.viewmodel.koinViewModel
 import com.mobilewe.wemobile.presentation.screen.payWithSacco.buyGoods.components.TillNumberDropDown
 import com.mobilewe.wemobile.presentation.screen.payWithSacco.buyGoods.components.BuyGoodsDialog
@@ -75,17 +76,11 @@ fun BuyGoodsContentScreen(
                 buyGoods = Merchant(
                     tillName = state.tillName,
                     tillNumber = state.tillNumber.toString(),
-                    amount = state.amount.toDouble(),
+                    amount = state.amount.toString(),
                     transactionDate = state.date.toString()
                 ),
                 onClickSend = {
-//                    val route = HomeAction.TillConfirm.sendData(
-//                        tillName = merchant.tillName,
-//                        tillNumber = merchant.tillNumber,
-//                        amount = merchant.amount.toDouble(),
-//                        date = getCurrentDateTime().toString()
-//                    )
-//                    navController.navigate(route)
+                    navController.navigate(TransactDes.BuyGoodsDetailsRoute(id =  state.tillName))
                 },
             )
         }

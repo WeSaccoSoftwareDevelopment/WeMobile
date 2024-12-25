@@ -62,15 +62,6 @@ fun BuyAirtimeScreen(
                 showBackArrow = true,
                 navigateBack = { navController.popBackStack() }
             )
-        },
-        bottomBar = {
-            ContinueButton(
-                text =  Resources.strings.continuee,
-                onClick = {
-                    buyAirtimeViewModel.onShouldShowDialog(true)
-                },
-                enable = buyAirtimeState.isBuyAirtimeEnabled,
-            )
         }
     ) {
         AccountTypeTextField(
@@ -92,6 +83,14 @@ fun BuyAirtimeScreen(
                 isSheetOpen = true
                 currentBottomSheet = BuyAirtimeModalSheetLayout.CONTACT
             }
+        )
+
+        ContinueButton(
+            text =  Resources.strings.continuee,
+            onClick = {
+                buyAirtimeViewModel.onShouldShowDialog(true)
+            },
+            enable = buyAirtimeState.isBuyAirtimeEnabled,
         )
 
         WeSaccoModalSheet(

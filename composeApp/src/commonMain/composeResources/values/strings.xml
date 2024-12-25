@@ -72,7 +72,6 @@
 
     <!--    Transact-->
     <string name="schedule_payment">Schedule payment</string>
-
     <string name="add_favourite">Add a favorite</string>
     <string name="favorite">Favorite</string>
     <string name="own_equity_account">Own Equity account</string>

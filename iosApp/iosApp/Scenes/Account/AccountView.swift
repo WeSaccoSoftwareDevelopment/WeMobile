@@ -12,3 +12,7 @@ struct AccountView: View {
         Text("AccountView")
     }
 }
+
+#Preview {
+    AccountView()
+}
